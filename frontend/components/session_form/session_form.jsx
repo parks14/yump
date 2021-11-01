@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
                         <div className="login-container">
                             <div className="login">Log in to Yump</div>
                         </div>
-                        <div className="demo-user" onClick={this.demoLogin}>Demo User</div>
+                        <button className="demo-user" onClick={this.demoLogin}>Demo User</button>
                         {this.renderErrors()}
                         <form onSubmit={this.handleSubmit}>
                             <div className="login-form">
@@ -110,9 +110,7 @@ class SessionForm extends React.Component {
                         <div className="signup-container">
                             <div className="signup">Sign Up for Yump</div>
                         </div>
-                        <div className="demo-user" onClick={this.demoLogin}>
-                            Demo User
-                        </div>
+                        <button className="demo-user" onClick={this.demoLogin}>Demo User</button>
                         {this.renderErrors()}
                         <form onSubmit={this.handleSubmit}>
                             <div className="signup-form">
