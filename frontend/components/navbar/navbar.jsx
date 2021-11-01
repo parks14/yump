@@ -5,7 +5,7 @@ const Navbar = ({ currentUser, logout }) => {
     const userDisplay = currentUser ? (
         <div className="navbar-items">
             <div className="navbar-dropdown">
-                <h2 className="user">{currentUser.first_name}</h2>
+                <h2 className="user">Hello {currentUser.first_name}</h2>
                 <button className="navbar-content" onClick={logout}>Log Out</button>
             </div>
         </div>

@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
+        this.clearErrors = this.clearErrors.bind(this);
     }
 
     update(field) {
@@ -44,12 +45,12 @@ class SessionForm extends React.Component {
         if (this.props.formType === "signup") {
             return (
                 <div className="change-form">
-                    Already on Yump? <Link to="/login">Log in</Link>
+                    Already on Yump? <Link to="/login" onClick={this.clearErrors}>Log in</Link>
                 </div>);
         } else {
             return (
                 <div className="change-form">
-                    New to Yump? <Link to="/signup">Sign Up</Link>
+                    New to Yump? <Link to="/signup" onClick={this.clearErrors}>Sign Up</Link>
                 </div>
             );
         }
@@ -65,6 +66,10 @@ class SessionForm extends React.Component {
         this.props.demoLogin(demoUser);
     }
 
+    clearErrors(e) {
+        this.props.clearErrors()
+    }
+
     render() {
         if (this.props.formType === 'login') {
             return (
@@ -72,11 +77,8 @@ class SessionForm extends React.Component {
                     <div className='session-container'>
                         <div className="login-container">
                             <div className="login">Log in to Yump</div>
-                            {this.changeForm()}
                         </div>
-                        <div className="demo-user" onClick={this.demoLogin}> 
-                            Demo User
-                        </div>
+                        <div className="demo-user" onClick={this.demoLogin}>Demo User</div>
                         {this.renderErrors()}
                         <form onSubmit={this.handleSubmit}>
                             <div className="login-form">

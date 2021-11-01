@@ -9,8 +9,8 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 const App = () => (
     <div>
         <header>
-            <h1>Yump</h1>
             <NavbarContainer /> 
+            <h1>Yump</h1>
         </header>
 
         <Switch>
