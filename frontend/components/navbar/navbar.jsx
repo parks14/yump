@@ -22,7 +22,6 @@ const Navbar = ({ currentUser, logout }) => {
         </div>
     )
 
-    // debugger
     return currentUser ? userGreeting() : sessionLinks();
 }
 
