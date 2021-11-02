@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+
+    .right-navbar {
+        justify-content: flex-end; 
+        margin-left: 65%;
+
+        .login-signup {
+            
+            .login-button, .signup-button {
+                text-decoration: none;
+                color: black;
+                font-weight: 700;
+                margin: 5px;
+            }
+
+            .login-button {
+                padding: 5px 10px;
+                &:hover {
+                    border-bottom: 1.7px solid black;
+                }
+            }
+
+            .signup-button {
+                border: 1.7px solid black;
+                border-radius: 3px;
+                padding: 5px 14px;
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
