@@ -1,30 +1,16 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-class BusinessIndexItem extends React.Component {
-    constructor(props) {
-        super(props)
-        this.handleClick = this.handleClick.bind(this);
-    };
-
-    handleClick() {
-        const businessId = this.props.business.id;
-        this.props.history.push(`/businesses/${businessId}`);
-    }
-
-    render() {
-        const { name, category, picture_url } = this.props.business
-        
+const BusinessIndexItem = props => {
         return (
-            <div className="business-index-item" onClick={this.handleClick}>
+            <div className="business-index-item">
                 <div className="index-item-info">
-                    <div className="index-item-name">{name}</div>
-                    <div className="index-item-category">{category}</div>
+                    <div className="index-item-name">{props.business.name}</div>
+                    <div className="index-item-category">{props.business.category}</div>
                 </div>
-                <img src={picture_url} />
+                {/* <img src={picture_url} /> */}
             </div>
         )
-    }
 }
 
 export default withRouter(BusinessIndexItem);

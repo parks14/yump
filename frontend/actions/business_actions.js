@@ -13,12 +13,12 @@ const receiveBusiness = business => ({
     business
 });
 
-export const fetchBusinesses = () => {
+export const fetchBusinesses = () => dispatch =>{
     return BusinessAPIUtil.fetchBusinesses()
-        .then(businesses => dispatchEvent(receiveBusinesses(businesses)))
+        .then(businesses => dispatch(receiveBusinesses(businesses)))
 };
 
-export const fetchBusiness = businessId => {
+export const fetchBusiness = businessId => dispatch => {
     return BusinessAPIUtil.fetchBusiness(businessId)
-        .then(businessId => dispatchEvent(receiveBusiness(businessId)))
+        .then(businessId => dispatch(receiveBusiness(businessId)))
 };

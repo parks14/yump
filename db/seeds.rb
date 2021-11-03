@@ -81,3 +81,68 @@ b5 = Business.create(
     long: -73.98612,
     website: "https://www.madamevo.com/"
 )
+
+b6 = Business.create(
+    name: "JeJu Noodle Bar",
+    category: "Korean",
+    address: "679 Greenwich St",
+    city: "New York",
+    state: "NY",
+    zip_code: "10014",
+    phone_number: "16466660947",
+    lat: 40.73304,
+    long: -74.00734,
+    website: "https://www.jejunoodlebar.com/"
+)
+
+b7 = Business.create(
+    name: "Szechuan Mountain House",
+    category: "Szechuan",
+    address: "23 St Marks Pl",
+    city: "New York",
+    state: "NY",
+    zip_code: "10003",
+    phone_number: "19173883866",
+    lat: 40.72911,
+    long: -73.98858,
+    website: "https://www.szechuanmountainhouse.com/"
+)
+
+b8 = Business.create(
+    name: "Hirohisa",
+    category: "Japanese",
+    address: "73 Thompson St",
+    city: "New York",
+    state: "NY",
+    zip_code: "10012",
+    phone_number: "12129251613",
+    lat: 40.724597,
+    long: -74.003174,
+    website: "https://www.hirohisa.nyc/"
+)
+
+b9 = Business.create(
+    name: "Kang Ho Dong Baekjeong",
+    category: "Korean",
+    address: "1 E 32nd St",
+    city: "New York",
+    state: "NY",
+    zip_code: "10016",
+    phone_number: "12129669839",
+    lat: 40.747173576622,
+    long: -73.9852144232788,
+    website: "https://www.baekjeongnyc.com/"
+)
+
+b10 = Business.create(
+    name: "Cho Dang Gol Korean Restaurant",
+    category: "Korean",
+    address: "55 W 35th St",
+    city: "New York",
+    state: "NY",
+    zip_code: "10001",
+    phone_number: "12126958222",
+    lat: 40.7502365112305,
+    long: -73.986198425293,
+    website: "https://chodanggolnyc.com/"
+)

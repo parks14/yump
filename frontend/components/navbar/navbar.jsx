@@ -26,6 +26,9 @@ const Navbar = ({ currentUser, logout }) => {
 
     return (
         <div className="navbar">
+            <div className="business-index">
+                <Link className="businesses" to="/businesses">Businesses</Link>
+            </div>
             <div className="right-navbar">
                 {userDisplay}
             </div>
