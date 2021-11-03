@@ -8,7 +8,7 @@ const Navbar = ({ currentUser, logout }) => {
                     <i className="far fa-user fa-2x"></i>
                     <i className="fas fa-sort-down"></i>
                     <div className="modal">
-                        <h2 className="user">Hello {currentUser.first_name} {currentUser.last_name.split("")[1].toUpperCase()}.</h2>
+                        <h2 className="user">Hello {currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
                         <i className="fas fa-user fa-1x">  About Me</i>
                     <button className="logout-button" onClick={logout}>Log Out</button>
                 </div>
