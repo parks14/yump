@@ -58,6 +58,9 @@
             border-radius: 3px;
             padding-top: 3%;
             padding-bottom: 3%;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -80,6 +83,12 @@
         &:after {
             margin-left: 5px;
         }
+    }
+
+     .errors {
+        font-size: 8px;
+        text-align: center;
+        margin-top: 4%;
     }
 
     .signup-form {
@@ -120,6 +129,9 @@
             padding-bottom: 2%;
             margin-top: 7%;
             margin-left: 4%;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

@@ -42,7 +42,6 @@ $main-font: Arial, Helvetica, sans-serif;
         margin-right: 4%;
         font-size: 10px;
         text-align: right;
-        // font-weight: 700;
         color: #333;
         font-size: xx-small;
     }
@@ -78,6 +77,9 @@ $main-font: Arial, Helvetica, sans-serif;
             border-radius: 3px;
             padding-top: 3%;
             padding-bottom: 3%;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -100,6 +102,12 @@ $main-font: Arial, Helvetica, sans-serif;
         &:after {
             margin-left: 5px;
         }
+    }
+
+    .errors {
+        font-size: 8px;
+        text-align: center;
+        margin-top: 3%;
     }
 
     .login-form {
@@ -125,6 +133,9 @@ $main-font: Arial, Helvetica, sans-serif;
             padding-bottom: 2%;
             margin-top: 7%;
             margin-left: 4%;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

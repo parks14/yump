@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 const Navbar = ({ currentUser, logout }) => {
     const userDisplay = currentUser ? (
             <div className="navbar-dropdown">
-                <h2 className="user">Hello {currentUser.first_name}</h2>
-                <button className="navbar-content" onClick={logout}>Log Out</button>
+                <div className="icon">
+                    <i className="far fa-user fa-2x"></i>
+                    <i className="fas fa-sort-down"></i>
+                    <div className="modal">
+                        <h2 className="user">Hello {currentUser.first_name} {currentUser.last_name.split("")[1].toUpperCase()}.</h2>
+                        <i className="fas fa-user fa-1x">  About Me</i>
+                    <button className="logout-button" onClick={logout}>Log Out</button>
+                </div>
+                </div>
+               
             </div>
     ) : (
         <div className="login-signup">
