@@ -1,0 +1,130 @@
+$main-color: #c41200;
+$main-font: Arial, Helvetica, sans-serif;
+
+.header {
+    display: flex;
+    background-color: $main-color;
+    padding: 14px;
+    font-family: $main-font;
+    justify-content: center;
+
+    .home {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+.session-login-container {
+    width: 20%;
+    min-height: 100%;
+    transform: translate(130%, 40%);
+    font-family: $main-font;
+
+    .login-container, .change-form-top {
+        text-align: center;
+        padding: 1%;
+        font-weight: 700;
+    }
+
+    .login-title {
+        color: $main-color;
+        font-size: 15px;
+    }
+
+    .change-form-top {
+        font-size: 10px;
+    }
+
+    .change-form-bottom {
+        margin-top: 3%;
+        margin-right: 4%;
+        font-size: 10px;
+        text-align: right;
+        // font-weight: 700;
+        color: #333;
+        font-size: xx-small;
+    }
+
+    .signup {
+        text-decoration: none;
+        color: #0073bb;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .terms {
+        text-align: center;
+        font-size: xx-small;
+        color: #333;
+        padding: 1%;
+    }
+
+    .demo-user {
+        display: flex;
+        justify-content: center;
+        margin: 5% 0% 5%;
+        text-align: center;
+        padding: 3% 0% 3%;
+        .demo-button {
+            display: block;
+            width: 90%;
+            background-color: white;
+            color: #333;
+            font-weight: 650;
+            border: 1px solid #333;
+            border-radius: 3px;
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+    }
+
+    .divider {
+        color: #333;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        &:before, &:after {
+            content: "";
+            height: 1px;
+            background-color: #333;
+            flex: 1;
+        }
+        &:before {
+            margin-right: 5px;
+        }
+        &:after {
+            margin-left: 5px;
+        }
+    }
+
+    .login-form {
+        margin-top: 8%;
+        align-items: center;
+        input {
+            display: block;
+            width: 88%;
+            margin-left: 4%;
+            margin-bottom: 2%;
+            padding: 1%;
+            font-size: 10px;
+        }
+        button {
+            display: block;
+            width: 92%;
+            background-color: $main-color;
+            color: white;
+            font-weight: 650;
+            border: 1px solid $main-color;
+            border-radius: 3px;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin-top: 7%;
+            margin-left: 4%;
+        }
+    }
+}
