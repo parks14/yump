@@ -10,4 +10,4 @@ json.extract! business,
     :lat, 
     :long, 
     :website
-json.picture_url business.picture_url
+json.photoUrls business.photos.map { |photo| url_for(photo) }

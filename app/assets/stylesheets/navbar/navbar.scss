@@ -5,9 +5,23 @@
     font-size: 10px;
     color: black;
 
+    .business-index {
+        justify-content: flex-start;
+        margin-left: 25%;
+        .businesses {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            padding: 5px 10px;
+            &:hover {
+                border-bottom: 1.7px solid black;
+            }
+        }
+    }
+
     .right-navbar {
         justify-content: flex-end; 
-        margin-left: 65%;
+        margin-left: 35%;
 
         .navbar-dropdown {
             .icon {
@@ -39,6 +53,7 @@
                 display: none;
                 flex-direction: column;
                 border: 1px solid #333;
+                background-color: white;
                 transform: translate(-54%, 42%);
                 width: 130px;
                 padding: 20%;
@@ -95,7 +110,7 @@
             .signup-button {
                 border: 1.7px solid black;
                 border-radius: 3px;
-                padding: 5px 14px;
+                padding: 4px 14px;
                 &:hover {
                     color: white;
                     background-color: black;

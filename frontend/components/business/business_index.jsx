@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessIndexItem from "./business_index_item";
-import Navbar from "../navbar/navbar";
+import NavbarContainer from "../navbar/navbar_container";
 
 class BusinessIndex extends React.Component {
     componentDidMount() {
@@ -12,9 +12,9 @@ class BusinessIndex extends React.Component {
         return (
             <div>
                 <div className="top-header">
-                    <Navbar currentUser={currentUser}/>
+                    <NavbarContainer />
                 </div>
-                <h1>Businesses: </h1>
+                <h1>All Results</h1>
                 {
                     businesses.map(business => (
                         <BusinessIndexItem 

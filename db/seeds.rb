@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 User.delete_all
 Business.delete_all
@@ -146,3 +147,84 @@ b10 = Business.create(
     long: -73.986198425293,
     website: "https://chodanggolnyc.com/"
 )
+
+#Oiji
+oiji1 = open('https://yump-seeds.s3.amazonaws.com/oiji1.jpeg')
+oiji2 = open('https://yump-seeds.s3.amazonaws.com/oiji2.jpeg')
+oiji3 = open('https://yump-seeds.s3.amazonaws.com/oiji3.jpeg')
+b1.photos.attach(io: oiji1, filename: 'oiji-1')
+b1.photos.attach(io: oiji2, filename: 'oiji-2')
+b1.photos.attach(io: oiji3, filename: 'oiji-3')
+
+#Mala
+mala1 = open('https://yump-seeds.s3.amazonaws.com/mala1.jpeg')
+mala2 = open('https://yump-seeds.s3.amazonaws.com/mala2.jpeg')
+mala3 = open('https://yump-seeds.s3.amazonaws.com/mala3.jpeg')
+b2.photos.attach(io: mala1, filename: 'mala-1')
+b2.photos.attach(io: mala2, filename: 'mala-2')
+b2.photos.attach(io: mala3, filename: 'mala-3')
+
+#jspec
+jspec1 = open('https://yump-seeds.s3.amazonaws.com/jspec1.jpeg')
+jspec2 = open('https://yump-seeds.s3.amazonaws.com/jspec2.jpeg')
+jspec3 = open('https://yump-seeds.s3.amazonaws.com/jspec3.jpeg')
+b3.photos.attach(io: jspec1, filename: 'jspec-1')
+b3.photos.attach(io: jspec2, filename: 'jspec-2')
+b3.photos.attach(io: jspec3, filename: 'jspec-3')
+
+#cha-an
+chaan1 = open('https://yump-seeds.s3.amazonaws.com/chaan1.jpeg')
+chaan2 = open('https://yump-seeds.s3.amazonaws.com/chaan2.JPG')
+chaan3 = open('https://yump-seeds.s3.amazonaws.com/chaan3.jpeg')
+b4.photos.attach(io: chaan1, filename: 'chaan-1')
+b4.photos.attach(io: chaan2, filename: 'chaan-2')
+b4.photos.attach(io: chaan3, filename: 'chaan-3')
+
+
+#madame vo
+madamevo1 = open('https://yump-seeds.s3.amazonaws.com/madamevo1.jpeg')
+madamevo2 = open('https://yump-seeds.s3.amazonaws.com/madamevo2.jpeg')
+madamevo3 = open('https://yump-seeds.s3.amazonaws.com/madamevo3.jpeg')
+b5.photos.attach(io: madamevo1, filename: 'madamevo-1')
+b5.photos.attach(io: madamevo2, filename: 'madamevo-2')
+b5.photos.attach(io: madamevo3, filename: 'madamevo-3')
+
+#jeju
+jeju1 = open('https://yump-seeds.s3.amazonaws.com/jeju1.jpeg')
+jeju2 = open('https://yump-seeds.s3.amazonaws.com/jeju2.jpeg')
+jeju3 = open('https://yump-seeds.s3.amazonaws.com/jeju3.jpeg')
+b6.photos.attach(io: jeju1, filename: 'jeju-1')
+b6.photos.attach(io: jeju2, filename: 'jeju-2')
+b6.photos.attach(io: jeju3, filename: 'jeju-3')
+
+#mountain
+mountain1 = open('https://yump-seeds.s3.amazonaws.com/mountain1.jpeg')
+mountain2 = open('https://yump-seeds.s3.amazonaws.com/mountain2.jpeg')
+mountain3 = open('https://yump-seeds.s3.amazonaws.com/mountain3.jpeg')
+b7.photos.attach(io: mountain1, filename: 'mountain-1')
+b7.photos.attach(io: mountain2, filename: 'mountain-2')
+b7.photos.attach(io: mountain3, filename: 'mountain-3')
+
+#hirohisa
+hirohisa1 = open('https://yump-seeds.s3.amazonaws.com/hirohisa1.jpeg')
+hirohisa2 = open('https://yump-seeds.s3.amazonaws.com/hirohisa2.jpeg')
+hirohisa3 = open('https://yump-seeds.s3.amazonaws.com/hirohisa3.jpeg')
+b8.photos.attach(io: hirohisa1, filename: 'hirohisa-1')
+b8.photos.attach(io: hirohisa2, filename: 'hirohisa-2')
+b8.photos.attach(io: hirohisa3, filename: 'hirohisa-3')
+
+#baekjeong
+baekjeong1 = open('https://yump-seeds.s3.amazonaws.com/baekjeong1.jpeg')
+baekjeong2 = open('https://yump-seeds.s3.amazonaws.com/baekjeong2.jpeg')
+baekjeong3 = open('https://yump-seeds.s3.amazonaws.com/baekjeong3.jpeg')
+b9.photos.attach(io: baekjeong1, filename: 'baekjeong-1')
+b9.photos.attach(io: baekjeong2, filename: 'baekjeong-2')
+b9.photos.attach(io: baekjeong3, filename: 'baekjeong-3')
+
+#chodang
+chodanggol1 = open('https://yump-seeds.s3.amazonaws.com/chodanggol1.jpeg')
+chodanggol2 = open('https://yump-seeds.s3.amazonaws.com/chodanggol2.jpeg')
+chodanggol3 = open('https://yump-seeds.s3.amazonaws.com/chodanggol3.jpeg')
+b10.photos.attach(io: chodanggol1, filename: 'chodanggol-1')
+b10.photos.attach(io: chodanggol2, filename: 'chodanggol-2')
+b10.photos.attach(io: chodanggol3, filename: 'chodanggol-3')
