@@ -7,6 +7,7 @@
 
 .business-index-item {
     font-family: Arial, Helvetica, sans-serif;
+    width: 65%;
 
     .index-item-info {
         display: flex;
@@ -14,6 +15,9 @@
         border-radius: 3px;
         padding: 2%;
         margin: 2%;
+        &:hover {
+        box-shadow: 0 0 3px 1px #e6e6e6;
+    }
 
         .img-container {
             height: 150px;
@@ -28,7 +32,7 @@
         }
 
         .info-container {
-            padding-left: 2%;
+            padding-left: 15px;
             display: flex;
             flex-direction: column;
 
@@ -38,20 +42,17 @@
             }
 
             .index-item-category {
-                font-size: 10px;
+                font-size: 9px;
                 font-weight: bold;
                 color: #4a4646;
                 border: 1px solid #E7E7E7;
-                border-radius: 3px;
+                border-radius: 2px;
                 background-color: #E7E7E7;
-                padding: 1%;
+                padding: 2px;
                 display: inline-block;
+                margin-top: 5px;
             }
         }
-
-        
     }
-
-    
 }
 
