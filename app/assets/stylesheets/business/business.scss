@@ -1,0 +1,57 @@
+.result-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2%;
+}
+
+.business-index-item {
+    font-family: Arial, Helvetica, sans-serif;
+
+    .index-item-info {
+        display: flex;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        padding: 2%;
+        margin: 2%;
+
+        .img-container {
+            height: 150px;
+            width: 150px;
+        
+    
+            .index-photo {
+                height: 100%;
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+
+        .info-container {
+            padding-left: 2%;
+            display: flex;
+            flex-direction: column;
+
+            .index-item-name {
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .index-item-category {
+                font-size: 10px;
+                font-weight: bold;
+                color: #4a4646;
+                border: 1px solid #E7E7E7;
+                border-radius: 3px;
+                background-color: #E7E7E7;
+                padding: 1%;
+                display: inline-block;
+            }
+        }
+
+        
+    }
+
+    
+}
+

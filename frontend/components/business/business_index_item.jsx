@@ -6,10 +6,14 @@ const BusinessIndexItem = props => {
             <div className="business-index-item">
                 <div className="index-item-info">
                     <div className="img-container">
-                        <img className="index-item-photo" src={props.business.photoUrls[0]} />
+                        <img className="index-photo" src={props.business.photoUrls[0]} />
                     </div>
-                    <div className="index-item-name">{props.business.name}</div>
-                    <div className="index-item-category">{props.business.category}</div>
+                    <div className="info-container">
+                        <div className="index-item-name">{props.business.name}</div>
+                        <div>
+                            <div className="index-item-category">{props.business.category}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

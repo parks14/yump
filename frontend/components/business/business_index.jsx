@@ -14,7 +14,7 @@ class BusinessIndex extends React.Component {
                 <div className="top-header">
                     <NavbarContainer />
                 </div>
-                <h1>All Results</h1>
+                <h1 className="result-title">All Results</h1>
                 {
                     businesses.map(business => (
                         <BusinessIndexItem 
