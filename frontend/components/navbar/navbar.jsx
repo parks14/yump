@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ currentUser, logout }) => {
+const Navbar = ({ currentUser, logout, props }) => {
     const userDisplay = currentUser ? (
             <div className="navbar-dropdown">
                 <div className="icon">
@@ -10,8 +10,8 @@ const Navbar = ({ currentUser, logout }) => {
                     <div className="modal">
                         <h2 className="user">Hello {currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
                         <i className="fas fa-user fa-1x">  About Me</i>
-                    <button className="logout-button" onClick={logout}>Log Out</button>
-                </div>
+                        <button className="logout-button" onClick={logout}>Log Out</button>
+                    </div>
                 </div>
                
             </div>
@@ -23,6 +23,7 @@ const Navbar = ({ currentUser, logout }) => {
             </div>
         </div>
     )
+
 
     return (
             <div className="navbar">
