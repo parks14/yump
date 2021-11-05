@@ -6,11 +6,12 @@ import SignUpFormContainer from "./session_form/signup_form_container";
 import BusinessIndexContainer from "./business/business_index_container";
 import { Link } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import Splash from "./splash/splash";
 
 const App = () => (
     <div>
         <Switch>
-            <Route exact path="/" component={NavbarContainer}/>
+            <Route exact path="/" component={Splash}/>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute excat path="/signup" component={SignUpFormContainer} />
             <Route exact path="/businesses" component={BusinessIndexContainer} />

@@ -62,15 +62,10 @@ $main-font: Arial, Helvetica, sans-serif;
     }
 
     .right-navbar-search {
-        // justify-content: flex-end; 
-        // margin-right: 35%;
 
         .navbar-dropdown-search {
             .icon-search {
-                // display: flex;
-                // position: relative;
                 justify-content: center;
-                // cursor: pointer;
                 padding: 4px;
                 border: 1px solid lightgray;
                 border-radius: 50%;
