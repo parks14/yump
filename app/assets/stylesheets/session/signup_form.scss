@@ -8,7 +8,7 @@
         text-align: center;
         padding: 1%;
         .signup-title {
-            color: $main-color;
+            color: $dark-red;
             font-size: 15px;
             font-weight: 700;
         }
@@ -121,10 +121,10 @@
         button {
             display: block;
             width: 92%;
-            background-color: $main-color;
+            background-color: $dark-red;
             color: white;
             font-weight: 650;
-            border: 1px solid $main-color;
+            border: 1px solid $dark-red;
             border-radius: 3px;
             padding-top: 2%;
             padding-bottom: 2%;

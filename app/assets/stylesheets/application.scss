@@ -14,11 +14,13 @@
  */
 
 @import './reset.scss';
+@import './constant.scss';
 @import './navbar/navbar.scss';
 @import './session/login_form.scss';
 @import './session/signup_form.scss';
-@import './business/business.scss';
+@import './business/business_index.scss';
 @import './navbar/navbar_search.scss';
 @import './splash/splash.scss';
+@import './business/business_show.scss'
 
  // *= require_tree .

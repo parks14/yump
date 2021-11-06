@@ -6,6 +6,8 @@ const SearchBar = () => {
             <div className="search-bar-container">
                 <div className="search-bar">
                     <input type="text" placeholder="korean"/>
+                </div>    
+                <div className="search-button-container">
                     <i className="fas fa-search fa-1x"></i>
                 </div>
             </div>

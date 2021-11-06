@@ -16,12 +16,10 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
 
         </div>
     ) : (
-        <div className="login-signup-search">
             <div>
                 <Link className="login-button-search" to="/login">Log In</Link>
                 <Link className="signup-button-search" to="/signup">Sign Up</Link>
             </div>
-        </div>
     )
 
 
@@ -33,7 +31,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
             <div className="search-nav">
                 <SearchBar />
             </div>
-            <div className="right-navbar-search">
+            <div className="session-button-container">
                 {userDisplay}
             </div>
         </div>

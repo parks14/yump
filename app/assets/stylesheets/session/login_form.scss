@@ -1,9 +1,6 @@
-$main-color: #c41200;
-$main-font: Arial, Helvetica, sans-serif;
-
 .header {
     display: flex;
-    background-color: $main-color;
+    background-color: $dark-red;
     padding: 14px;
     font-family: $main-font;
     justify-content: center;
@@ -29,7 +26,7 @@ $main-font: Arial, Helvetica, sans-serif;
     }
 
     .login-title {
-        color: $main-color;
+        color: $dark-red;
         font-size: 15px;
     }
 
@@ -125,10 +122,10 @@ $main-font: Arial, Helvetica, sans-serif;
         button {
             display: block;
             width: 92%;
-            background-color: $main-color;
+            background-color: $dark-red;
             color: white;
             font-weight: 650;
-            border: 1px solid $main-color;
+            border: 1px solid $dark-red;
             border-radius: 3px;
             padding-top: 2%;
             padding-bottom: 2%;
