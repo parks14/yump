@@ -9,5 +9,7 @@ json.extract! business,
     :phone_number, 
     :lat, 
     :long, 
-    :website
+    :website,
+    :price,
+    :hours
 json.photoUrls business.photos.map { |photo| url_for(photo) }

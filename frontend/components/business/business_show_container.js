@@ -1,14 +1,10 @@
 import { connect } from "react-redux";
-import { fetchBusiness } from "../../util/business_api_util";
+import { fetchBusiness } from "../../actions/business_actions";
 import BusinessShow from './business_show';
 
-const mSTP = (state, {match}) => {
-    const businessId = parseInt(match.params.businessId);
-    const business = selectBusiness(state.entities, businessId);
-
+const mSTP = (state, ownProps) => {
     return {
-        businessId,
-        business
+        business: state.entities.businesses[ownProps.match.params.businessId]
     };
 };
 

@@ -28,7 +28,9 @@ b1 = Business.create(
     phone_number: "16467679050",
     lat: 40.72727,
     long: -73.98585,
-    website: "http://www.oijinyc.com/"
+    website: "http://www.oijinyc.com/",
+    price: "$$$",
+    hours: "5:00 PM - 10:00 PM"
 )
 
 b2 = Business.create(
@@ -41,7 +43,9 @@ b2 = Business.create(
     phone_number: "12123538880",
     lat: 40.72713,
     long: -73.98542,
-    website: "https://www.malaproject.nyc/"
+    website: "https://www.malaproject.nyc/",
+    price: "$$",
+    hours: "12:00 PM - 9:15 PM"
 )
 
 b3 = Business.create(
@@ -54,7 +58,9 @@ b3 = Business.create(
     phone_number: "12122870107",
     lat: 40.72699,
     long: -73.98922,
-    website: "https://www.jspec-ny.com/"
+    website: "https://www.jspec-ny.com/",
+    price: "$$$",
+    hours: "5:00 PM - 11:00 PM"
 )
 
 b4 = Business.create(
@@ -67,7 +73,9 @@ b4 = Business.create(
     phone_number: "12122288030",
     lat: 40.72947,
     long: -73.98813,
-    website: "https://www.chaanteahouse.com/"
+    website: "https://www.chaanteahouse.com/",
+    price: "$$",
+    hours: "1:00 PM - 8:00 PM"
 )
 
 b5 = Business.create(
@@ -80,7 +88,9 @@ b5 = Business.create(
     phone_number: "19172612115",
     lat: 40.72925,
     long: -73.98612,
-    website: "https://www.madamevo.com/"
+    website: "https://www.madamevo.com/",
+    price: "$$",
+    hours: "12:00 PM - 10:00 PM"
 )
 
 b6 = Business.create(
@@ -93,7 +103,9 @@ b6 = Business.create(
     phone_number: "16466660947",
     lat: 40.73304,
     long: -74.00734,
-    website: "https://www.jejunoodlebar.com/"
+    website: "https://www.jejunoodlebar.com/",
+    price: "$$$",
+    hours: "5:00 PM - 10:00 PM"
 )
 
 b7 = Business.create(
@@ -106,7 +118,9 @@ b7 = Business.create(
     phone_number: "19173883866",
     lat: 40.72911,
     long: -73.98858,
-    website: "https://www.szechuanmountainhouse.com/"
+    website: "https://www.szechuanmountainhouse.com/",
+    price: "$$",
+    hours: "11:30 AM - 10:30 PM"
 )
 
 b8 = Business.create(
@@ -119,7 +133,9 @@ b8 = Business.create(
     phone_number: "12129251613",
     lat: 40.724597,
     long: -74.003174,
-    website: "https://www.hirohisa.nyc/"
+    website: "https://www.hirohisa.nyc/",
+    price: "$$$$",
+    hours: "12:00 PM - 9:30 PM"
 )
 
 b9 = Business.create(
@@ -132,7 +148,9 @@ b9 = Business.create(
     phone_number: "12129669839",
     lat: 40.747173576622,
     long: -73.9852144232788,
-    website: "https://www.baekjeongnyc.com/"
+    website: "https://www.baekjeongnyc.com/",
+    price: "$$$",
+    hours: "12:30 PM - 11:00 PM"
 )
 
 b10 = Business.create(
@@ -145,7 +163,9 @@ b10 = Business.create(
     phone_number: "12126958222",
     lat: 40.7502365112305,
     long: -73.986198425293,
-    website: "https://chodanggolnyc.com/"
+    website: "https://chodanggolnyc.com/",
+    price: "$$",
+    hours: "12:00 PM - 9:30 PM"
 )
 
 #Oiji
