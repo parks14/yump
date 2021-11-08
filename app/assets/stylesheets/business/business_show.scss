@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     font-family: $main-font;
+    height: 100vh;
+    width: 100vw;
 }
 
 .business-header {
-    height: 100vh;
+    height: 286px;
     width: 100vw;
 
     .business-img-container {
@@ -14,15 +16,186 @@
         height: 286px;
         width: 100%;
         overflow: hidden;
-        border: 1px solid red;
+        position: absolute;
 
-    .business-img {
-        opacity: .85;
-        width: 300px;
-        height: 100%;
-        top: 50%;
-        left: 50%;
+        .business-img {
+            width: 300px;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    
+    .business-header-detail {
+        position: relative;
+        color: white;
+        padding-top: 180px;
+        padding-left: 260px;
+        font-family: $main-font;
+        .business-name {
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+    
+    .rating, .price-category-container, .hours {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .rating {
+        padding: 8px 0;
+    }
+
+    .price-category-container {
+        padding-bottom: 8px;
+    }
+
+    .hours {
+        padding-bottom: 10px;
     }
 }
+
+.right-sidebar {
+    position: fixed;
+    width: 270px;
+    right: 210px;
+    top: 380px;
+    border: 1px solid lightgray;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 12px;
+
+    a {
+        text-decoration: none;
+        color: $teal;
+    }
+
+    .website-container {
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 20px;
+        font-weight: 600;
+        a {
+            float: left;
+        }
+        i {
+            float: right;
+        }
+    }
+
+    .number-container {
+        border-bottom: 1px solid lightgray;
+        padding-top: 12px;
+        padding-bottom: 20px;
+        .number {
+            float: left;
+        }
+        i {
+            float: right;
+        }
+    }
+
+    .address-container {
+        padding-top: 12px;
+        p {
+            color: gray;
+            float: left;
+        }
+        i {
+            float: right;
+        }
+    }
+}
+
+.details-container {
+    margin: 16px 520px 0 260px;
+    .button-container {
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+    .write-review-button {
+        border: 1px solid $bright-red;
+        border-radius: 2px;
+        color: white;
+        background-color: $bright-red;
+        font-size: 11px;
+        font-family: $main-font;
+        font-weight: 500;
+        padding: 3px 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .location-hours-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightgray;
+        display: inline-block;
+        .location-title {
+            font-weight: 700;
+            font-size: 13px;
+            padding-bottom: 15px;
+        }
+        .location {
+            float: left;
+            .map-snippet {
+                border: 1px solid gray;
+                width: 210px;
+                height: 100px;
+            }
+            .address {
+                padding-top: 15px;
+                font-size: 10px;
+                .street-address {
+                    color: $teal;
+                    font-weight: 500;
+                }
+            }
+        }
+        .hours-container {
+            float: right;
+            font-size: 11px;
+            .days {
+                float: left;
+                padding-left: 70px;
+                p {
+                    padding-top: 6px;
+                }
+            }
+            .hours {
+                float: right;
+                padding-left: 15px;
+                p {
+                    padding-top: 6px;
+                    padding-right: 75px;
+                }
+            }
+        }
+    }
+
+    .reviews-container {
+        padding-top: 15px;
+        .reviews-title {
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .write-review-container {
+            border: 1px solid lightgray;
+            box-shadow: $shadow;
+            margin-top: 15px;
+            padding: 15px;
+            width: 460px;
+            display: inline-block;
+            p {
+                float: right;
+                color: $teal;
+                font-size: 10px;
+                font-weight: 500;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
