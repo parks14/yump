@@ -33,7 +33,7 @@ class BusinessDetail extends React.Component {
             </div>
             <div className="right-sidebar">
                 <div className="website-container">
-                    <a href={business.website} className="website">{business.website}</a>
+                    <a href={business.website} className="website" target="_blank">{business.website}</a>
                     <i className="fas fa-external-link-alt"></i>
                 </div>
                 <div className="number-container">

@@ -17,6 +17,7 @@ const App = () => (
             <AuthRoute excat path="/signup" component={SignUpFormContainer} />
             <Route exact path="/businesses" component={BusinessIndexContainer} />
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
+            {/* <Redirect to="/" /> */}
         </Switch>
     </div>
 );
