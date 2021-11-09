@@ -9,12 +9,10 @@ const businessesReducer = (oldState = {}, action) => {
         case RECEIVE_BUSINESSES:
             return action.businesses;
         case RECEIVE_BUSINESS:
-            nextState[action.business.id] = action.business;
-            return nextState;
+            return Object.assign(nextState, action.business);
         case RECEIVE_REVIEW:
-            const { review, average_rating } = action;
-            nextState[review.business_id].reviewIds.push(review.id);
-            nextState[review.business_id].average_rating = average_rating;
+            const business = nextState[action.res.review.business_id]
+            business.reviews[action.res.review.id] = action.res.review
             return nextState;
         default:
             return oldState;

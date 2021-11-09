@@ -6,6 +6,7 @@ class Api::BusinessesController < ApplicationController
 
     def show
         @business = Business.find_by(id: params[:id])
+        @reviews = @business.reviews
         render :show
     end
 

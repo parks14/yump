@@ -10,8 +10,9 @@ const mSTP = (state, ownProps) => {
             rating: 0
         },
         business: state.entities.businesses[ownProps.match.params.businessId],
+        businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
-        currentUder: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.id],
         errors: state.errors.review,
         formType: 'Create Review'
     }
