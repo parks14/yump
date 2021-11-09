@@ -47,7 +47,9 @@ class BusinessDetail extends React.Component {
             </div>
             <div className="details-container">
                 <div className="button-container">
-                    <button className="write-review-button" type="submit"><i className="far fa-star"></i> Write a Review</button>
+                    <Link to={`/businesses/${business.id}/reviews/new`}>
+                        <button className="write-review-button"><i className="far fa-star"></i> Write a Review</button>
+                    </Link>
                 </div>
                 <div className="location-hours-container">
                     <p className="location-title">Location & Hours</p>
