@@ -10,7 +10,9 @@ const mSTP = (state, ownProps) => {
     return {
         reviews: business[reviews],
         author: users[review.author_id],
-        businesses: state.entities.businesses
+        businesses: state.entities.businesses,
+        currentUserId: state.session.id,
+        currentUser: state.entities.users[state.session.id]
     }
 };
 
@@ -23,3 +25,4 @@ const mDTP = dispatch => {
 };
 
 export default connect(mSTP, mDTP)(ReviewList);
+export default connect(mSTP, mDTP)(ReviewListItem);
