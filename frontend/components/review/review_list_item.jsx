@@ -10,26 +10,26 @@ class ReviewListItem extends React.Component {
     }
 
     handleDelete() {
-        this.props.deleteReview(this.props.review, this.props.review.business_id)
-            .then(() => window.location.reload())
+            this.props.deleteReview(this.props.review, this.props.review.business_id)
+                .then(() => window.location.reload())
     }
 
     editDeleteDropdown() {
         const { review, currentUser } = this.props;
         // debugger
-        if (review.author_id === this.props.currentUser.id) {
+        if (review.author_id === this.props.currentUser) {
             return (
                 <div className="dropdown-wrapper">
                     <input type="checkbox" id="input" />
-                    <label for="input" className="button">
-                        <span class="dropdown-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <label htmlFor="input" className="button">
+                        <span className="dropdown-icon"><i className="fas fa-ellipsis-h"></i></span>
                     </label>
-                    <div class="dropdown-options">
+                    <div className="dropdown-options">
                         <ul>
                             <li>
                                 <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>Write an update</Link>
                             </li>
-                            <li><a onClick={this.handleDelete}>Remove review</a></li>
+                            <li><button onClick={this.handleDelete}>Remove review</button></li>
                         </ul>
                     </div>
                 </div>
@@ -46,14 +46,12 @@ class ReviewListItem extends React.Component {
 
     render() {
         const { review } = this.props;
-        
-        
         return (
             <div>
                 <div className="author-container">
                     <div>{review.author.first_name} {review.author.last_name[0]}</div>
                 </div>
-                {/* <div>{this.editDeleteDropdown()}</div> */}
+                <div>{this.editDeleteDropdown()}</div>
                 <div className="review-rating-container">
                     <div className="rating">Rating: {review.rating}</div>
                     <div className="date-created">{this.formatDate()}</div>

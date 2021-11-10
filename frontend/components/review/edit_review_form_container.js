@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { updateReview, fetchReviews } from "../../actions/review_actions";
-import { fetchBusiness } from "../../util/business_api_util";
+import { fetchBusiness } from "../../actions/business_actions";
 import { clearReviewErrors } from "../../actions/review_actions";
 import EditReviewForm from "./edit_review_form";
 

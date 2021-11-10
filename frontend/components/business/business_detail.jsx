@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ReviewList from "../review/review_list";
+import ReviewListContainer from "../review/review_list_item_container";
 
 class BusinessDetail extends React.Component {
     render() {
@@ -90,7 +91,7 @@ class BusinessDetail extends React.Component {
                         <p>Start your review of {business.name}.</p>
                     </div>
                     <div className="review-container">
-                        <ReviewList reviews={business.reviews} />
+                        <ReviewListContainer reviews={business.reviews} />
                     </div>
                 </div>
             </div>

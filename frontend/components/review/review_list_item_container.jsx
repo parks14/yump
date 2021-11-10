@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { fetchReviews, updateReview, deleteReview } from '../../actions/review_actions';
 import ReviewListItem from './review_list_item';
 import ReviewList from './review_list';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
     const business = state.entities.businesses[ownProps.match.params.businessId]
     return {
-        reviews: business[reviews],
-        author: users[review.author_id],
+        reviews: business.reviews,
+        // author: state.entities.users[review.author_id],
         businesses: state.entities.businesses,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id]
@@ -24,5 +24,5 @@ const mDTP = dispatch => {
     }
 };
 
-export default connect(mSTP, mDTP)(ReviewList);
-export default connect(mSTP, mDTP)(ReviewListItem);
+export default withRouter(connect(mSTP, mDTP)(ReviewList));
+// export default connect(mSTP, mDTP)(ReviewListItem);

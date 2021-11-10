@@ -70,7 +70,7 @@ export const updateReview = (review, businessId) => dispatch => {
 export const deleteReview = (review, businessId) => dispatch => {
     return (
         ReviewAPIUtil.deleteReview(review, businessId)
-            .then(() => (
+            .then(review => (
                 dispatch(removeReview(review))
             ), err => (
                 dispatch(receiveReviewErrors(err.responseJSON))

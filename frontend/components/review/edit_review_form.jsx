@@ -22,7 +22,7 @@ class EditReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        this.props.processForm(review)
+        this.props.processForm(review, review.business_id)
             .then(() => this.props.history.push(`/businesses/${this.state.business_id}`))
     }
 

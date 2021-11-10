@@ -14,6 +14,7 @@ class ReviewList extends React.Component {
     };
 
     render() {
+        // debugger
         if (!this.props.reviews) {
             return null
         } else {
@@ -23,6 +24,7 @@ class ReviewList extends React.Component {
                         Object.values(this.props.reviews).map(review => (
                             <ReviewListItem
                                 review={review}
+                                currentUser={this.props.currentUserId}
                                 key={review.id}
                             />
                         ))
