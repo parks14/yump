@@ -10,8 +10,10 @@ class ReviewListItem extends React.Component {
     }
 
     handleDelete() {
+        // debugger
             this.props.deleteReview(this.props.review, this.props.review.business_id)
-                .then(() => window.location.reload())
+                .then(() => this.props.fetchBusiness(this.props.review.business_id))
+                // .then(() => window.location.reload())
     }
 
     editDeleteDropdown() {
@@ -29,7 +31,7 @@ class ReviewListItem extends React.Component {
                             <li>
                                 <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>Write an update</Link>
                             </li>
-                            <li><button onClick={this.handleDelete}>Remove review</button></li>
+                            <li><button onClick={(this.handleDelete)}>Remove review</button></li>
                         </ul>
                     </div>
                 </div>

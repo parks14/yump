@@ -5,7 +5,21 @@ import ReviewList from "../review/review_list";
 import ReviewListContainer from "../review/review_list_item_container";
 
 class BusinessDetail extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = this.props.business;
+    }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     debugger
+    //     if (prevProps.business.reviews !== this.props.business.reviews) {
+    //         this.props.fetchBusiness(this.props.match.params.businessId)
+    //     }
+    // }
+
+
     render() {
+        debugger
         const { business } = this.props;
 
         if (!this.props.business) {

@@ -56,13 +56,11 @@ export const createReview = (review, businessId) => dispatch => {
     )
 };
 
-export const updateReview = (review, businessId) => dispatch => {
+export const updateReview = (reviewId, businessId) => dispatch => {
     return (
-        ReviewAPIUtil.updateReview(review, businessId)
+        ReviewAPIUtil.updateReview(reviewId, businessId)
             .then(review => (
                 dispatch(receiveReview(review))
-            ), err => (
-                dispatch(receiveReviewErrors(err.responseJSON))
             ))
     )
 };

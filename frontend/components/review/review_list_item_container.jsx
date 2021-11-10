@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchReviews, updateReview, deleteReview } from '../../actions/review_actions';
+import { fetchBusiness } from '../../actions/business_actions';
 import ReviewListItem from './review_list_item';
 import ReviewList from './review_list';
 import { withRouter } from 'react-router-dom';
@@ -11,6 +12,7 @@ const mSTP = (state, ownProps) => {
         reviews: business.reviews,
         // author: state.entities.users[review.author_id],
         businesses: state.entities.businesses,
+        businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id]
     }
@@ -19,6 +21,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchReviews: businessId => dispatch(fetchReviews(businessId)),
+        fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
         updateReview: (review, businessId) => dispatch(updateReview(review, businessId)),
         deleteReview: (review, businessId) => dispatch(deleteReview(review, businessId))
     }

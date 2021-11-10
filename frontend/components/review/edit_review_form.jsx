@@ -8,8 +8,9 @@ class EditReviewForm extends React.Component {
         this.state = {
             body: this.props.review.body,
             rating: this.props.review.rating,
-            author_id: this.props.currentUserId,
-            business_id: this.props.businessId
+            author_id: this.props.review.author_id,
+            business_id: this.props.match.params.businessId,
+            id: this.props.review.id
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -17,19 +18,22 @@ class EditReviewForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId)
+        this.props.fetchReviews(this.props.match.params.businessId)
     };
 
     handleSubmit(e) {
         e.preventDefault();
-        const review = Object.assign({}, this.state);
-        this.props.processForm(review, review.business_id)
-            .then(() => this.props.history.push(`/businesses/${this.state.business_id}`))
+        // debugger
+        // const review = Object.assign({}, this.state);
+        this.props.processForm(this.state, this.props.match.params.businessId)
+            .then(() => this.props.history.push(`/businesses/${this.props.match.params.businessId}`))
     }
 
     handleChange(type) {
-        return (e) => (
+        return (e) => {
+            console.log(e.currentTarget.value)
             this.setState({ [type]: e.currentTarget.value })
-        )
+        }
     }
 
     renderErrors() {
@@ -50,6 +54,7 @@ class EditReviewForm extends React.Component {
 
     render() {
         const { business } = this.props;
+        // debugger
 
         if (!business) {
             return null
