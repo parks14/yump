@@ -50,6 +50,8 @@ export const createReview = (review, businessId) => dispatch => {
         ReviewAPIUtil.createReview(review, businessId)
             .then(review => (
                 dispatch(receiveReview(review))
+            ), err => (
+                dispatch(receiveReviewErrors(err.responseJSON))
             ))
     )
 };

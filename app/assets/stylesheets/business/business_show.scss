@@ -176,7 +176,7 @@
         }
     }
 
-    .reviews-container {
+    .reviews-list-container {
         padding-top: 15px;
         .reviews-title {
             font-weight: 700;
@@ -197,6 +197,29 @@
                 &:hover {
                     cursor: pointer;
                 }
+            }
+        }
+       
+        .review-container {
+            padding-top: 1rem;
+            .author-container {
+                font-size: 13px;
+                font-weight: 600;
+                padding-left: 3rem;
+                padding-bottom: 1rem;
+            }
+            .review-rating-container {
+                font-size: 10px;
+                color: gray;
+                display: flex;
+                padding-bottom: 1rem;
+                .rating {
+                    padding-right: 5px;
+                }
+            }
+            .body-container {
+                font-size: 9px;
+                padding-bottom: 1rem;
             }
         }
     }

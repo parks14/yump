@@ -1,0 +1,65 @@
+.create-review-container {
+    font-family: $main-font;
+    padding: 1rem 5rem 0 20rem;
+    
+
+    .review-header-container {
+        padding-bottom: 1rem;
+        width: 420px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        
+        .review-title {
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: 700;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: $teal;
+            font-size: 9px;
+            font-weight: 600;
+        }
+    }
+
+    .review-body-container {
+        width: 390px;
+        height: 220px;
+        padding: 1rem;
+        border: 1px solid gray;
+        border-radius: 2px;
+    }
+
+    .rating-selector {
+        padding-bottom: 1rem;
+    }
+    
+    textarea {
+        resize: none;
+        outline: none;
+        border: none;
+        width: 385px;
+        height: 178px;
+        font-size: 11px;
+        font-family: $main-font;
+    }
+
+    .thank-you {
+        font-size: 9px;
+    }
+
+    .post-review-button {
+        margin-top: 2rem;
+        font-size: 11px;
+        font-weight: 600;
+        color: white;
+        background-color: $bright-red;
+        border: 1px solid $bright-red;
+        border-radius: 2px;
+        padding: 5px 32px;
+    }
+    
+}

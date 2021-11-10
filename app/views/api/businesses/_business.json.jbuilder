@@ -11,5 +11,6 @@ json.extract! business,
     :long, 
     :website,
     :price,
-    :hours
+    :hours,
+    :average_rating
 json.photoUrls business.photos.map { |photo| url_for(photo) }

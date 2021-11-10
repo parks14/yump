@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
+import ReviewList from "../review/review_list";
 
 class BusinessDetail extends React.Component {
     render() {
@@ -24,7 +25,7 @@ class BusinessDetail extends React.Component {
                 </div>
                 <div className="business-header-detail">
                     <div className="business-name">{business.name}</div>
-                    <div className="rating">Rating</div>
+                    <div className="rating">{business.average_rating}</div>
                     <div className="price-category-container">
                             <div className="price">{business.price} - {business.category}</div>
                     </div>
@@ -83,20 +84,19 @@ class BusinessDetail extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="reviews-container">
+                <div className="reviews-list-container">
                     <div className="reviews-title">Recommended Reviews</div>
                     <div className="write-review-container">
                         <p>Start your review of {business.name}.</p>
                     </div>
-                    <div className="reviews-container">
-                        <p>Reviews</p>
+                    <div className="review-container">
+                        <ReviewList reviews={business.reviews} />
                     </div>
                 </div>
             </div>
         </div>
     ) 
     }}
-    
 };
 
 export default withRouter(BusinessDetail);
