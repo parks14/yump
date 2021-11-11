@@ -9,13 +9,46 @@ require 'open-uri'
 
 User.delete_all
 Business.delete_all
+Review.delete_all
 
 u1 = User.create(
     first_name: 'Demo',
     last_name: 'User',
     email: 'demouser@mail.com',
     password: 'demouser',
-    zip_code: 11361
+    zip_code: '11361'
+)
+
+u2 = User.create(
+    first_name: 'Sohee',
+    last_name: 'Park',
+    email: 'soheep@mail.com',
+    password: 'soheepark',
+    zip_code: '11361'
+)
+
+u3 = User.create(
+    first_name: 'Matt',
+    last_name: 'Swedin',
+    email: 'matt@mail.com',
+    password: 'mattswedin',
+    zip_code: '11211'
+)
+
+u4 = User.create(
+    first_name: 'Subin',
+    last_name: 'Cho',
+    email: 'subin@mail.com',
+    password: 'subincho',
+    zip_code: '08003'
+)
+
+u5 = User.create(
+    first_name: 'Suzanne',
+    last_name: 'Li',
+    email: 'suzanne@mail.com',
+    password: 'suzanneli',
+    zip_code: '11214'
 )
 
 b1 = Business.create(
@@ -248,3 +281,143 @@ chodanggol3 = open('https://yump-seeds.s3.amazonaws.com/chodanggol3.jpeg')
 b10.photos.attach(io: chodanggol1, filename: 'chodanggol-1')
 b10.photos.attach(io: chodanggol2, filename: 'chodanggol-2')
 b10.photos.attach(io: chodanggol3, filename: 'chodanggol-3')
+
+r1 = Review.create(
+    author_id: u1.id,
+    business_id: b1.id,
+    body: "The food was very good, and the service was excellet!",
+    rating: 5
+)
+
+r2 = Review.create(
+    author_id: u2.id,
+    business_id: b1.id,
+    body: "Very good food, I will be going back",
+    rating: 4
+)
+
+r3 = Review.create(
+    author_id: u3.id,
+    business_id: b2.id,
+    body: "Food is good, I wished it was a bit brighter inside",
+    rating: 4
+)
+
+r4 = Review.create(
+    author_id: u4.id,
+    business_id: b2.id,
+    body: "I like that you get a whole list of ingredients you can choose from.",
+    rating: 5
+)
+
+r5 = Review.create(
+    author_id: u5.id,
+    business_id: b3.id,
+    body: "I wish they had more variety in their menu",
+    rating: 3
+)
+
+r6 = Review.create(
+    author_id: u1.id,
+    business_id: b3.id,
+    body: "Very good quality wagyu",
+    rating: 4
+)
+
+r7 = Review.create(
+    author_id: u2.id,
+    business_id: b4.id,
+    body: "Love the desserts here, so good!",
+    rating: 5
+)
+
+r8 = Review.create(
+    author_id: u3.id,
+    business_id: b4.id,
+    body: "I like their matcha green tea drinks",
+    rating: 4
+)
+
+r9 = Review.create(
+    author_id: u4.id,
+    business_id: b5.id,
+    body: "I think their pho a little too bland for my taste",
+    rating: 3
+)
+
+r10 = Review.create(
+    author_id: u5.id,
+    business_id: b5.id,
+    body: "It was just okay",
+    rating: 4
+)
+
+r11 = Review.create(
+    author_id: u1.id,
+    business_id: b6.id,
+    body: "I love their ssambap, something I always get!",
+    rating: 5
+)
+
+r12 = Review.create(
+    author_id: u2.id,
+    business_id: b6.id,
+    body: "Ironically, I did not enjoy their noodle dishes too much",
+    rating: 4
+)
+
+r13 = Review.create(
+    author_id: u3.id,
+    business_id: b7.id,
+    body: "I love Szechuan food, and theirs is amazing!",
+    rating: 5
+)
+
+r14 = Review.create(
+    author_id: u4.id,
+    business_id: b7.id,
+    body: "My favorite place to go to when I'm craving something spicy!",
+    rating: 5
+)
+
+r15 = Review.create(
+    author_id: u5.id,
+    business_id: b8.id,
+    body: "Tried their omakase, it was an enjoyable experience",
+    rating: 4
+)
+
+r16 = Review.create(
+    author_id: u1.id,
+    business_id: b8.id,
+    body: "I like uni, and their uni bowls were great!",
+    rating: 5
+)
+
+r17 = Review.create(
+    author_id: u2.id,
+    business_id: b9.id,
+    body: "Korean bbq cant go wrong.",
+    rating: 5
+)
+
+r18 = Review.create(
+    author_id: u3.id,
+    business_id: b9.id,
+    body: "The wait time gets too long over the weekends",
+    rating: 4
+)
+
+r19 = Review.create(
+    author_id: u4.id,
+    business_id: b10.id,
+    body: "Place to go when I'm craving spicy tofu soup",
+    rating: 5
+)
+
+r20 = Review.create(
+    author_id: u5.id,
+    business_id: b10.id,
+    body: "I love the atmosphere at this place!",
+    rating: 5
+)

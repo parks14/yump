@@ -33,6 +33,11 @@
         border-radius: 2px;
     }
 
+    .star-group {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     .rating-selector {
         padding-bottom: 1rem;
     }
@@ -42,11 +47,13 @@
         display: none;
         &:checked ~ label {
             background-color: $bright-red;
+            // background-color: $light-gray;
         }
     }
 
     label {
         background-color: $light-gray;
+        // background-color: $bright-red;
         margin: 1px;
         border-radius: 3px;
         // display: flex;
