@@ -40,7 +40,7 @@
 
     input[type="radio"] {
         display: none;
-        &:checked + label {
+        &:checked ~ label {
             background-color: $bright-red;
         }
     }
