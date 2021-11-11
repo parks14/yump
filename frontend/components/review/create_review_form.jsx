@@ -48,6 +48,31 @@ class CreateReviewForm extends React.Component {
         }
     };
 
+    // starRating() {
+    //     const { review } = this.props;
+    //     return (
+    //         <div>
+    //             {[...Array(5)].map((star, i) => {
+    //                 const ratingValue = i + 1;
+    //                 return (
+    //                     <label>
+    //                         <input 
+    //                             type="radio" 
+    //                             name="rating" 
+    //                             value={ratingValue} 
+    //                             onChange={this.handleChange("rating")} 
+    //                         />
+    //                         <i 
+    //                             className="fas fa-star fa-1x"
+    //                             color={ratingValue <= review.rating ? "#F43939" : "#D32322"}
+    //                         ></i>
+    //                     </label>
+    //                 );
+    //             })}
+    //         </div>
+    //     )
+    // }
+
     render() {
         const { business } = this.props;
 
@@ -71,15 +96,20 @@ class CreateReviewForm extends React.Component {
                                     <fieldset className="rating-selector">
                                         <span className="star-group">
                                             <input type="radio" value="1" id="radio1" name="rating" onChange={this.handleChange("rating")} />
-                                            <label htmlFor="radio1"><i className="fas fa-star"></i></label>
+                                            <label htmlFor="radio1"><i className="fas fa-star fa-1x"></i></label>
+                                            
                                             <input type="radio" value="2" id="radio2" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio2"><i className="fas fa-star"></i></label>
+                                            
                                             <input type="radio" value="3" id="radio3" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio3"><i className="fas fa-star"></i></label>
+
                                             <input type="radio" value="4" id="radio4" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio4"><i className="fas fa-star"></i></label>
+
                                             <input type="radio" value="5" id="radio5" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio5"><i className="fas fa-star"></i></label>
+                                            
                                         </span>
                                     </fieldset>
                                 </div>

@@ -21,19 +21,37 @@ class ReviewListItem extends React.Component {
         if (review.author_id === this.props.currentUser) {
             return (
                 <div className="dropdown-wrapper">
-                    <input type="checkbox" id="input" />
-                    <label htmlFor="input" className="button">
-                        <span className="dropdown-icon"><i className="fas fa-ellipsis-h"></i></span>
-                    </label>
-                    <div className="dropdown-options">
-                        <ul>
-                            <li>
-                                <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>Write an update</Link>
-                            </li>
-                            <li><button onClick={(this.handleDelete)}>Remove review</button></li>
-                        </ul>
+                    <button className="drop-button"><i className="fas fa-ellipsis-h fa-1x"></i></button>
+                    <div className="dropdown-content">
+                        <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`} className="write-review-link">Write an update</Link>
+                        <a className="remove-review" onClick={(this.handleDelete)}>Remove review</a>
                     </div>
                 </div>
+            )
+        }
+    }
+
+    ratingImage() {
+        const { review } = this.props;
+        if (review.rating === 1) {
+            return (
+                <div><img src={window.rating1} /></div>
+            )
+        } else if (review.rating === 2) {
+            return (
+                <div><img src={window.rating2} /></div>
+            )
+        } else if (review.rating === 3) {
+            return (
+                <div><img src={window.rating3} /></div>
+            )
+        } else if (review.rating === 4) {
+            return (
+                <div><img src={window.rating4} /></div>
+            )
+        } else if (review.rating === 5) {
+            return (
+                <div><img src={window.rating5} /></div>
             )
         }
     }
@@ -49,12 +67,19 @@ class ReviewListItem extends React.Component {
         const { review } = this.props;
         return (
             <div>
-                <div className="author-container">
-                    <div>{review.author.first_name} {review.author.last_name[0]}</div>
+                <div className="reviews-header">
+                    <div className="author-container">
+                        <div className="author-icon">
+                            <i className="fas fa-user-circle fa-3x"></i>
+                        </div>
+                        <div className="author-name">{review.author.first_name} {review.author.last_name[0]}</div>
+                    </div>
+                    <div>{this.editDeleteDropdown()}</div>
                 </div>
-                <div>{this.editDeleteDropdown()}</div>
                 <div className="review-rating-container">
-                    <div className="rating">Rating: {review.rating}</div>
+                    <div className="rating">
+                        {this.ratingImage()}
+                    </div>
                     <div className="date-created">{this.formatDate()}</div>
                 </div>
                 <div className="body-container">

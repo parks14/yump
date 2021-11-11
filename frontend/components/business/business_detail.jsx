@@ -10,6 +10,58 @@ class BusinessDetail extends React.Component {
         this.state = this.props.business;
     }
 
+    ratingImage() {
+        const { review, business } = this.props;
+        if (business.average_rating === 1) {
+            return (
+                <div><img src={window.rating1} /></div>
+            )
+        } else if (business.average_rating > 1 && business.average_rating <= 1.5) {
+            return (
+                <div><img src={window.rating15} /></div>
+            )
+        } else if (business.average_rating > 1.5 && business.average_rating <= 2) {
+            return (
+                <div><img src={window.rating2} /></div>
+            )
+        } else if (business.average_rating > 2 && business.average_rating <= 2.5) {
+            return (
+                <div><img src={window.rating25} /></div>
+            )
+        } else if (business.average_rating > 2.5 && business.average_rating <= 3) {
+            return (
+                <div><img src={window.rating3} /></div>
+            )
+        } else if (business.average_rating > 3 && business.average_rating <= 3.5) {
+            return (
+                <div><img src={window.rating35} /></div>
+            )
+        } else if (business.average_rating > 3.5 && business.average_rating <= 4) {
+            return (
+                <div><img src={window.rating4} /></div>
+            )
+        } else if (business.average_rating > 4 && business.average_rating <= 4.5) {
+            return (
+                <div><img src={window.rating45} /></div>
+            )
+        } else if (business.average_rating > 4.5 && business.average_rating <= 5) {
+            return (
+                <div><img src={window.rating5} /></div>
+            )
+        }
+    }
+
+    reviewCount() {
+        const { business } = this.props;
+        if (business.reviews) {
+            return (
+                (Object.values(business.reviews)).length
+            )
+        } else {
+            return "0"
+        }
+    }
+
     render() {
         // debugger
         const { business } = this.props;
@@ -32,7 +84,12 @@ class BusinessDetail extends React.Component {
                 </div>
                 <div className="business-header-detail">
                     <div className="business-name">{business.name}</div>
-                    <div className="rating">{business.average_rating}</div>
+                    <div className="rating">
+                        {this.ratingImage()} 
+                        <div className="review-text">
+                            {this.reviewCount()} reviews
+                        </div>
+                    </div>
                     <div className="price-category-container">
                             <div className="price">{business.price} - {business.category}</div>
                     </div>
@@ -94,7 +151,7 @@ class BusinessDetail extends React.Component {
                 <div className="reviews-list-container">
                     <div className="reviews-title">Recommended Reviews</div>
                     <div className="write-review-container">
-                        <p>Start your review of {business.name}.</p>
+                        <Link to={`/businesses/${business.id}/reviews/new`} className="create-review-link">Start your review of {business.name}.</Link>
                     </div>
                     <div className="review-container">
                         <ReviewListContainer reviews={business.reviews} />

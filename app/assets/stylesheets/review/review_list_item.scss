@@ -1,0 +1,75 @@
+.reviews-header {
+    padding-top: 15px 40% 0 20%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .author-container {
+        font-size: 12px;
+        font-weight: 600;
+        height: 50px;
+        width: 170px;
+        display: flex;
+        .author-name {
+            padding-left: 2%;
+        }
+        i {
+            color: lightgray;
+        }
+    }
+
+    .dropdown-wrapper {
+        display: inline-block;
+        position: relative;
+        &:hover .dropdown-content{
+            display: block;
+        }
+    }
+
+    .drop-button {
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        font-size: 10px;
+        background-color: white;
+        box-shadow: $shadow;
+        z-index: 1;
+        min-width: 150px;
+        border-radius: 2px;
+        padding: 10px;
+        right: 5px;
+    }
+
+    .write-review-link, .remove-review {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 8px 8px;
+        border-radius: 2px;
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+}
+
+.review-rating-container {
+    font-size: 9px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    .rating {
+        padding-right: 5px;
+        img {
+            width: 70px;
+        }
+    }
+}
+.body-container {
+    font-size: 9px;
+    padding-bottom: 1rem;
+}

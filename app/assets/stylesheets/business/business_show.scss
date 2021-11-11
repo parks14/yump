@@ -29,8 +29,8 @@
     .business-header-detail {
         position: relative;
         color: white;
-        padding-top: 180px;
-        padding-left: 10%;
+        padding-top: 160px;
+        padding-left: 20%;
         font-family: $main-font;
         .business-name {
             font-size: 35px;
@@ -38,12 +38,22 @@
         }
     }
     
-    .rating, .price-category-container, .hours {
+    .price-category-container, .hours {
         font-size: 11px;
         font-weight: 600;
     }
     .rating {
+        display: flex;
+        align-items: center;
         padding: 8px 0;
+        img {
+            width: 120px;
+        }
+        .review-text {
+            padding-left: 1%;
+            font-size: 11px;
+            font-weight: 600;
+        }
     }
 
     .price-category-container {
@@ -107,7 +117,7 @@
 }
 
 .details-container {
-    margin: 2% 43% 0 10%;
+    padding: 25px 40% 0 20%;
     .button-container {
         padding-bottom: 15px;
         border-bottom: 1px solid lightgray;
@@ -177,7 +187,7 @@
     }
 
     .reviews-list-container {
-        padding-top: 15px;
+        padding-top: 20px;
         .reviews-title {
             font-weight: 700;
             font-size: 13px;
@@ -189,11 +199,12 @@
             padding: 15px;
             width: 90%;
             display: inline-block;
-            p {
+            .create-review-link {
                 float: right;
                 color: $teal;
                 font-size: 10px;
                 font-weight: 500;
+                text-decoration: none;
                 &:hover {
                     cursor: pointer;
                 }
@@ -201,26 +212,8 @@
         }
        
         .review-container {
-            padding-top: 1rem;
-            .author-container {
-                font-size: 13px;
-                font-weight: 600;
-                padding-left: 3rem;
-                padding-bottom: 1rem;
-            }
-            .review-rating-container {
-                font-size: 10px;
-                color: gray;
-                display: flex;
-                padding-bottom: 1rem;
-                .rating {
-                    padding-right: 5px;
-                }
-            }
-            .body-container {
-                font-size: 9px;
-                padding-bottom: 1rem;
-            }
+            padding-top: 15px;
+            // display: flex;
         }
     }
 }

@@ -10,7 +10,6 @@ class ReviewList extends React.Component {
     }
 
     render() {
-        // debugger
         if (!this.props.reviews) {
             return null
         } else {
