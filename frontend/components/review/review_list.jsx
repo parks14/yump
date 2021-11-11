@@ -13,10 +13,11 @@ class ReviewList extends React.Component {
         if (!this.props.reviews) {
             return null
         } else {
+            const reversedReviews = Object.values(this.props.reviews).reverse();
             return (
                 <div>
                     {
-                        Object.values(this.props.reviews).map(review => (
+                        reversedReviews.map(review => (
                             <ReviewListItem
                                 review={review}
                                 currentUser={this.props.currentUserId}
