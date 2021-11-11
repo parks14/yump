@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
             return (
                 <div>
                     <div className="header">
-                        <Link className="home" to="/">Yump</Link>
+                        <Link className="home" to="/"><img src={window.logo} className="logo" /></Link>
                     </div>
                     <div className='session-login-container'>
                         <div className="login-container">
@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
             return (
                 <div>
                     <div className="header">
-                        <Link className="home" to="/">Yump</Link>
+                        <Link className="home" to="/"><img src={window.logo} className="logo" /></Link>
                     </div>
                     <div className='session-signup-container'>
                         <div className="signup-container">

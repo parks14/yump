@@ -1,14 +1,10 @@
 .header {
     display: flex;
     background-color: $dark-red;
-    padding: 14px;
     font-family: $main-font;
     justify-content: center;
 
     .home {
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
         font-weight: 700;
     }
 }

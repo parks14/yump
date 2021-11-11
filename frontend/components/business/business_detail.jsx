@@ -64,8 +64,7 @@ class BusinessDetail extends React.Component {
 
     render() {
         // debugger
-        const { business } = this.props;
-
+        const { business, currentUser } = this.props;
         if (!this.props.business) {
             return null
         } else {
@@ -119,7 +118,9 @@ class BusinessDetail extends React.Component {
                 <div className="location-hours-container">
                     <p className="location-title">Location & Hours</p>
                     <div className="location">
-                        <div className="map-snippet">map</div>
+                        <div className="map-snippet">
+                            <img src={window.map} />
+                        </div>
                         <div className="address">
                             <div className="street-address">{business.address}</div>
                             <div className="city-state">
@@ -151,6 +152,12 @@ class BusinessDetail extends React.Component {
                 <div className="reviews-list-container">
                     <div className="reviews-title">Recommended Reviews</div>
                     <div className="write-review-container">
+                        <div className="author-container">
+                            <div className="author-icon">
+                                <i className="fas fa-user-circle fa-3x"></i>
+                            </div>
+                            {/* <div className="author-name">{currentUser[1]} {currentUser[2][0]}</div> */}
+                        </div>
                         <Link to={`/businesses/${business.id}/reviews/new`} className="create-review-link">Start your review of {business.name}.</Link>
                     </div>
                     <div className="review-container">

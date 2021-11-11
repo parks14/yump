@@ -4,7 +4,7 @@ import { fetchBusiness } from "../../actions/business_actions";
 import NavbarSearchContainer from "../navbar/navbar_search_container";
 import BusinessDetail from "./business_detail";
 
-const BusinessShow = ({ business, fetchBusiness, match }) => {
+const BusinessShow = ({ business, fetchBusiness, match, currentUser }) => {
     useEffect (
         () => {
             fetchBusiness(match.params.businessId)
@@ -15,7 +15,11 @@ const BusinessShow = ({ business, fetchBusiness, match }) => {
     return (
         <div >
             <NavbarSearchContainer />
-            <BusinessDetail business={business} fetchBusiness={fetchBusiness}/>
+            <BusinessDetail 
+                business={business}
+                currentUser={currentUser} 
+                fetchBusiness={fetchBusiness}
+            />
         </div>
     )
 };

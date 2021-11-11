@@ -29,7 +29,6 @@ class EditReviewForm extends React.Component {
 
     handleChange(type) {
         return (e) => {
-            // console.log(e.currentTarget.value)
             this.setState({ [type]: e.currentTarget.value })
         }
     }
@@ -72,31 +71,21 @@ class EditReviewForm extends React.Component {
                                     <div className="rating-container">
                                         <fieldset className="rating-selector">
                                             <span className="star-group">
-                                                <input type="radio" value="1" id="radio1" name="rating"
-                                                    checked={this.state.rating === 1} 
-                                                    onChange={this.handleChange("rating")} 
-                                                />
-                                                <label htmlFor="radio1"><i className="fas fa-star"></i></label>
-                                                <input type="radio" value="2" id="radio2" name="rating"
-                                                    checked={this.state.rating === 2}
-                                                    onChange={this.handleChange("rating")} 
-                                                />
-                                                <label htmlFor="radio2"><i className="fas fa-star"></i></label>
-                                                <input type="radio" value="3" id="radio3" name="rating"
-                                                    checked={this.state.rating === 3}
-                                                    onChange={this.handleChange("rating")} 
-                                                />
-                                                <label htmlFor="radio3"><i className="fas fa-star"></i></label>
-                                                <input type="radio" value="4" id="radio4" name="rating" 
-                                                    checked={this.state.rating === 4}
-                                                    onChange={this.handleChange("rating")} 
-                                                />
-                                                <label htmlFor="radio4"><i className="fas fa-star"></i></label>
-                                                <input type="radio" value="5" id="radio5" name="rating"
-                                                    checked={this.state.rating === 5}
-                                                    onChange={this.handleChange("rating")} 
-                                                />
+                                                <input type="radio" value="5" id="radio5" name="rating" onChange={this.handleChange("rating")} checked={this.state.rating === "5"} />
                                                 <label htmlFor="radio5"><i className="fas fa-star"></i></label>
+
+                                                <input type="radio" value="4" id="radio4" name="rating" onChange={this.handleChange("rating")} checked={this.state.rating === "4"} />
+                                                <label htmlFor="radio4"><i className="fas fa-star"></i></label>
+
+                                                <input type="radio" value="3" id="radio3" name="rating" onChange={this.handleChange("rating")} checked={this.state.rating === "3"} />
+                                                <label htmlFor="radio3"><i className="fas fa-star"></i></label>
+
+                                                <input type="radio" value="2" id="radio2" name="rating" onChange={this.handleChange("rating")} checked={this.state.rating === "2"} />
+                                                <label htmlFor="radio2"><i className="fas fa-star"></i></label>
+
+                                                <input type="radio" value="1" id="radio1" name="rating" onChange={this.handleChange("rating")} checked={this.state.rating === "1"} />
+                                                <label htmlFor="radio1"><i className="fas fa-star fa-1x"></i></label>
+
                                             </span>
                                         </fieldset>
                                     </div>

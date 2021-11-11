@@ -36,36 +36,32 @@
     .star-group {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: flex-end;
+        
+        input[type="radio"] {
+            display: none;
+            &:checked ~ label, &:hover ~ label {
+                background-color: $bright-red;
+            }
+        }
+
+        label {
+            background-color: $light-gray;
+            margin: 1px;
+            border-radius: 3px;
+            .fa-star {
+                cursor: pointer;
+                color: white;
+                padding: 3px;
+            }
+        }
     }
+
 
     .rating-selector {
-        padding-bottom: 1rem;
+        padding-bottom: 5px;
     }
 
-
-    input[type="radio"] {
-        display: none;
-        &:checked ~ label {
-            background-color: $bright-red;
-            // background-color: $light-gray;
-        }
-    }
-
-    label {
-        background-color: $light-gray;
-        // background-color: $bright-red;
-        margin: 1px;
-        border-radius: 3px;
-        // display: flex;
-        // flex-direction: row-reverse;
-        .fa-star {
-            cursor: pointer;
-            color: white;
-            padding: 3px;
-        }
-    }
-    
-    
     textarea {
         resize: none;
         outline: none;
@@ -74,6 +70,9 @@
         height: 178px;
         font-size: 11px;
         font-family: $main-font;
+        &::placeholder {
+            color: $light-gray;
+        }
     }
 
     .thank-you {
@@ -89,6 +88,7 @@
         border: 1px solid $bright-red;
         border-radius: 2px;
         padding: 5px 32px;
+        cursor: pointer;
     }
     
 }
