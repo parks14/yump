@@ -5,9 +5,10 @@ import { clearReviewErrors } from "../../actions/review_actions";
 import EditReviewForm from "./edit_review_form";
 
 const mSTP = (state, ownProps) => {
+    const business = state.entities.businesses[ownProps.match.params.businessId]
     return {
-        review: state.entities.reviews[ownProps.match.params.reviewId],
-        business: state.entities.businesses[ownProps.match.params.businessId],
+        review: business.reviews[ownProps.match.params.reviewId],
+        business: business,
         businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],

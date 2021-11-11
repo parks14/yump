@@ -10,16 +10,8 @@ class BusinessDetail extends React.Component {
         this.state = this.props.business;
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     debugger
-    //     if (prevProps.business.reviews !== this.props.business.reviews) {
-    //         this.props.fetchBusiness(this.props.match.params.businessId)
-    //     }
-    // }
-
-
     render() {
-        debugger
+        // debugger
         const { business } = this.props;
 
         if (!this.props.business) {

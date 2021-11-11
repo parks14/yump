@@ -13,7 +13,6 @@ class ReviewListItem extends React.Component {
         // debugger
             this.props.deleteReview(this.props.review, this.props.review.business_id)
                 .then(() => this.props.fetchBusiness(this.props.review.business_id))
-                // .then(() => window.location.reload())
     }
 
     editDeleteDropdown() {

@@ -9,26 +9,6 @@ class ReviewList extends React.Component {
         this.state = this.props.reviews;
     }
 
-    // componentDidMount() {
-    //     if (this.props.fetchReviews) {
-    //         this.props.fetchReviews(this.props.match.params.businessId)
-    //     }
-    // };
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     // debugger
-    //     if (prevProps.reviews && (Object.values(this.props.reviews).length !== Object.values(prevProps.reviews).length)) {
-    //         this.props.fetchReviews(this.props.match.params.businessId)
-    //     }
-    // }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     debugger
-    //     if ((prevProps.reviews).length !== (this.props.reviews).length) {
-    //         this.props.fetchReviews(this.props.match.params.businessId)
-    //     }
-    // }
-
     render() {
         // debugger
         if (!this.props.reviews) {
