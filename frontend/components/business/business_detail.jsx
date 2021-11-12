@@ -64,7 +64,7 @@ class BusinessDetail extends React.Component {
 
     render() {
         // debugger
-        const { business, currentUser } = this.props;
+        const { business, currentUser, reviews } = this.props;
         if (!this.props.business) {
             return null
         } else {
@@ -161,7 +161,7 @@ class BusinessDetail extends React.Component {
                         <Link to={`/businesses/${business.id}/reviews/new`} className="create-review-link">Start your review of {business.name}.</Link>
                     </div>
                     <div className="review-container">
-                        <ReviewListContainer reviews={business.reviews} />
+                        <ReviewListContainer reviews={reviews} />
                     </div>
                 </div>
             </div>

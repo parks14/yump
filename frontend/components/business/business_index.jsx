@@ -10,6 +10,7 @@ class BusinessIndex extends React.Component {
 
     render() {
         const { businesses, currentUser } = this.props;
+        // debugger
         return (
             <div>
                 <div className="top-header-business">

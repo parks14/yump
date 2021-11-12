@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => {
     return {
         business: business,
         currentUserId: state.session.id,
+        reviews: business.reviews
         // currentUser: Object.values(state.entities.users[state.session.id])
     };
 };
