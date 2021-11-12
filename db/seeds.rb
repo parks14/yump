@@ -8,8 +8,11 @@
 require 'open-uri'
 
 User.delete_all
+ApplicationRecord.connection.reset_pk_sequence!('users')
 Business.delete_all
+ApplicationRecord.connection.reset_pk_sequence!('businesses')
 Review.delete_all
+ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
 u1 = User.create(
     first_name: 'Demo',

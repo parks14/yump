@@ -27,7 +27,6 @@
         width: 300px;
         .logo-container {
                 padding-left: 23%;
-                // right: 0;
                 display: flex;
                 align-items: center;
                 img {
@@ -35,75 +34,6 @@
                     padding: 5px;
                 }
             }
-        // .navbar-dropdown {
-        //     .icon {
-        //         display: flex;
-        //         position: relative;
-        //         cursor: pointer;
-        //     }
-
-        //     .far, .fa-sort-down {
-        //         border: 1px solid rgba(black, 0.5);
-        //     }
-
-        //     .far {
-        //         margin-left: 80%;
-        //         border-radius: 3px 0px 0px 3px;
-        //         background-color: #F5F5F5;
-        //         padding: 12% 16%;
-        //         color: lightgray;
-        //     }
-
-        //     .fa-sort-down {
-        //         border-radius: 0px 3px 3px 0px;
-        //         background-color: rgba(black, 0.5);
-        //         padding: 16% 10% 12% 10%;
-        //         color: white;
-        //     }
-
-        //     .modal {
-        //         position: absolute;
-        //         display: none;
-        //         flex-direction: column;
-        //         border: 1px solid #333;
-        //         background-color: white;
-        //         transform: translate(-54%, 42%);
-        //         width: 130px;
-        //         padding: 20%;
-        //         z-index: 99;
-                
-        //         .user, .fa-user {
-        //             padding-bottom: 5%;
-        //             border-bottom: 1px solid lightgray;
-        //         }
-
-        //         .user {
-        //             font-size: 12px;
-        //         }
-        //         .fa-user {
-        //             text-align: left;
-        //             padding-top: 5%;
-        //         }
-            
-        //         button {
-        //             background-color: white;
-        //             border: none;
-        //             text-align: left;
-        //             font-size: 10px;
-        //             color: #0073bb;
-        //             padding-top: 5%;
-        //             padding-left: 0%;
-        //             &:hover {
-        //                 text-decoration: underline;
-        //                 cursor: pointer;
-        //             }
-        //         }
-        //     }
-
-        //     .icon:hover .modal {
-        //         display: flex;
-        //     }
-        // }
 
         .login-signup {
             .login-button, .signup-button {
