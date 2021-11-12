@@ -1,20 +1,107 @@
+.index-body-container {
+    font-family: $main-font;
+    display: flex;
+}
+
+.filters-container {
+    margin-top: 80px;
+    height: 100vh;
+    width: 160px;
+    padding: 20px;
+}
+
+.price-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.filters-title {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.price-buttons {
+    padding: 15px 0 13px 0;
+    border-bottom: 1px solid lightgray;
+    button {
+        font-size: 8px;
+        font-weight: 500;
+        width: 35px;
+        background-color: white;
+        border: 1px solid lightgray;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        &:hover {
+            background-color: lightgray;
+        }
+        &:focus {
+            background-color: lightgray;
+        }
+    }
+}
+
+.category-filter-container {
+    padding: 15px 0 13px 0;
+    div {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    button {
+        font-size: 8px;
+        font-weight: 500;
+        background-color: white;
+        border: 1px solid lightgray;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        margin: 0 5px 5px 0;
+        &:hover {
+            background-color: lightgray;
+        }
+        &:focus {
+            background-color: lightgray;
+        }
+    }
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 13px 0;
+}
+
+.business-body {
+    margin-top: 80px;
+    padding-top: 20px;
+    font-family: $main-font;
+    width: 47%;
+}
+
 .result-title {
     font-family: $main-font;
     font-size: 12px;
     font-weight: bold;
-    margin: 2%;
+    margin: 4px 0 5px 0;
 }
 
 .business-index-item {
     font-family: $main-font;
-    width: 65%;
+    width: 100%;
 
     .index-item-info {
         display: flex;
         border: 1px solid lightgray;
         border-radius: 3px;
-        padding: 2%;
-        margin: 2%;
+        padding: 15px;
+        margin: 20px 20px 15px 0;
         &:hover {
         box-shadow: 0 0 3px 1px #e6e6e6;
     }
@@ -53,6 +140,13 @@
                 margin-top: 5px;
             }
         }
+    }
+}
+
+.average-rating-container {
+    img {
+        width: 65px;
+        padding-top: 8px;
     }
 }
 

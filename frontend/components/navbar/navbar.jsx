@@ -4,14 +4,19 @@ import { Link } from "react-router-dom";
 const Navbar = ({ currentUser, logout, props }) => {
     const userDisplay = currentUser ? (
             <div className="navbar-dropdown">
-                <div className="icon">
+                <button className="navbar-dropdown-button">
                     <i className="far fa-user fa-2x"></i>
-                    <i className="fas fa-sort-down"></i>
-                    <div className="modal">
-                        <h2 className="user">Hello {currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
-                        <i className="fas fa-user fa-1x">  About Me</i>
-                        <button className="logout-button" onClick={logout}>Log Out</button>
+                </button>
+                <div className="navbar-dropdown-content">
+                    <div className="greeting-container">
+                        <i className="far fa-user fa-3x"></i>
+                        <h2>{currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
                     </div>
+                <div className="about-me">
+                    <i className="fas fa-user fa-1x"></i>  
+                    <p>About Me</p> 
+                </div>
+                    <button className="logout-button" onClick={logout}>Log Out</button>
                 </div>
             </div>
     ) : (

@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchBusiness } from "../../actions/business_actions";
+import { fetchReviews } from "../../actions/review_actions";
 import BusinessShow from './business_show';
 
 const mSTP = (state, ownProps) => {
@@ -13,7 +14,8 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = dispatch => ({
-    fetchBusiness: businessId => dispatch(fetchBusiness(businessId))
+    fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
+    fetchReviews: businessId => dispatch(fetchReviews(businessId))
 });
 
 export default connect(mSTP, mDTP)(BusinessShow);

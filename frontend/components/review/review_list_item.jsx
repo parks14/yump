@@ -10,14 +10,12 @@ class ReviewListItem extends React.Component {
     }
 
     handleDelete() {
-        // debugger
             this.props.deleteReview(this.props.review, this.props.review.business_id)
                 .then(() => this.props.fetchBusiness(this.props.review.business_id))
     }
 
     editDeleteDropdown() {
         const { review, currentUser } = this.props;
-        // debugger
         if (review.author_id === this.props.currentUser) {
             return (
                 <div className="dropdown-wrapper">

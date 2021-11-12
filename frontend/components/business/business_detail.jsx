@@ -63,7 +63,6 @@ class BusinessDetail extends React.Component {
     }
 
     render() {
-        // debugger
         const { business, currentUser, reviews } = this.props;
         if (!this.props.business) {
             return null
