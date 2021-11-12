@@ -56,13 +56,31 @@
 }
 
 .session-button-container {
-    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+.links-logo-container {
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
+        img {
+            width: 20px;
+            padding: 5px;
+        }
+    }
+
+.buttons-container {
+    width: 300px;
+    display: flex;
 }
 
 .login-button-search, .signup-button-search {
     text-decoration: none;
     font-size: 11px;
-    margin: 4px;
+    // margin: 4px;
 }
 
 .login-button-search {
@@ -70,6 +88,7 @@
     color: black;
     border: 1px solid lightgray;
     border-radius: 2px;
+    margin-right: 2%;
     &:hover {
         background-color: lightgray;
     }
@@ -89,9 +108,6 @@
 .icon-search {
     justify-content: center;
     padding: 4px;
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    background-color: lightgray;
     &:hover .modal-search {
         display: flex;
     }

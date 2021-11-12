@@ -6,7 +6,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
     const userDisplay = currentUser ? (
         <div className="navbar-dropdown-search">
             <div className="icon-search">
-                <i className="far fa-user fa-1x"></i>
+                <i className="fas fa-user-circle fa-2x"></i>
                 <div className="modal-search">
                     <h2 className="user-search">Hello {currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
                     <i className="fas fa-user fa-1x">  About Me</i>
@@ -16,7 +16,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
 
         </div>
     ) : (
-            <div>
+            <div className="session-button-container">
                 <Link className="login-button-search" to="/login">Log In</Link>
                 <Link className="signup-button-search" to="/signup">Sign Up</Link>
             </div>
@@ -31,8 +31,12 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
             <div className="search-nav">
                 <SearchBar />
             </div>
-            <div className="session-button-container">
+            <div className="buttons-container">
                 {userDisplay}
+                <div className="links-logo-container">
+                    <a href="https://github.com/parks14/yump" target="blank"><img src={window.gitdark} /></a>
+                    <a href=""><img src={window.linkedin} /></a>
+                </div>
             </div>
         </div>
     )

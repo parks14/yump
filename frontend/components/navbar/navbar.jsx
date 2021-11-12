@@ -13,14 +13,11 @@ const Navbar = ({ currentUser, logout, props }) => {
                         <button className="logout-button" onClick={logout}>Log Out</button>
                     </div>
                 </div>
-               
             </div>
     ) : (
         <div className="login-signup">
-            <div>
                 <Link className="login-button" to="/login">Log In</Link>
                 <Link className="signup-button" to="/signup">Sign Up</Link>
-            </div>
         </div>
     )
 
@@ -32,6 +29,10 @@ const Navbar = ({ currentUser, logout, props }) => {
                 </div>
                 <div className="right-navbar">
                     {userDisplay}
+                    <div className="logo-container">
+                        <a href="https://github.com/parks14/yump" target="blank"><img src={window.github} /></a>
+                        <a href=""><img src={window.linkedin} /></a>
+                    </div>
                 </div>
             </div>
     )
