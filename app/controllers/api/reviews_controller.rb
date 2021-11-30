@@ -2,7 +2,9 @@ class Api::ReviewsController < ApplicationController
     before_action :require_logged_in, except: [:index]
 
     def index
-        @reviews = Review.all.where(business_id: params[:business_id])
+        #@reviews = Review.all.where(business_id: params[:business_id])
+        @reviews = Review.all
+        render :index
     end
 
     def show
@@ -35,7 +37,7 @@ class Api::ReviewsController < ApplicationController
         if @review && @review.destroy
             render :show
         else
-            render json: @review.errors.full_messages, status: 422
+            render json: ["Can not delete"], status: 422
         end
     end
 

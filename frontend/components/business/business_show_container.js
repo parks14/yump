@@ -8,14 +8,15 @@ const mSTP = (state, ownProps) => {
     return {
         business: business,
         currentUserId: state.session.id,
-        reviews: business.reviews
+        // reviews: business.reviews
         // currentUser: Object.values(state.entities.users[state.session.id])
     };
 };
 
 const mDTP = dispatch => ({
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-    fetchReviews: businessId => dispatch(fetchReviews(businessId))
+    // fetchReviews: businessId => dispatch(fetchReviews(businessId))
+    fetchReviews: () => dispatch(fetchReviews())
 });
 
 export default connect(mSTP, mDTP)(BusinessShow);

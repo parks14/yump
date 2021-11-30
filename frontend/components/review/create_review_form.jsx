@@ -70,7 +70,6 @@ class CreateReviewForm extends React.Component {
                                 <div className="rating-container">
                                     <fieldset className="rating-selector">
                                         <span className="star-group">
-
                                             <input type="radio" value="5" id="radio5" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio5"><i className="fas fa-star"></i></label>
 
@@ -85,7 +84,6 @@ class CreateReviewForm extends React.Component {
                                             
                                             <input type="radio" value="1" id="radio1" name="rating" onChange={this.handleChange("rating")} />
                                             <label htmlFor="radio1"><i className="fas fa-star fa-1x"></i></label>
-                                            
                                         </span>
                                     </fieldset>
                                 </div>

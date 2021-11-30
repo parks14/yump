@@ -10,7 +10,8 @@ class ReviewListItem extends React.Component {
     }
 
     handleDelete() {
-            this.props.deleteReview(this.props.review, this.props.review.business_id)
+            // this.props.deleteReview(this.props.review, this.props.review.business_id)
+            this.props.deleteReview(this.props.review)
                 .then(() => this.props.fetchBusiness(this.props.review.business_id))
     }
 
