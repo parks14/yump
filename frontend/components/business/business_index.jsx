@@ -3,6 +3,7 @@ import BusinessIndexItem from "./business_index_item";
 import NavbarContainer from "../navbar/navbar_container";
 import NavbarSearchContainer from "../navbar/navbar_search_container";
 import FilterSidebarContainer from "../filter/filter_sidebar_container";
+import BusinessMap from "../business_map/business_map";
 
 class BusinessIndex extends React.Component {
     componentDidMount() {
@@ -33,6 +34,7 @@ class BusinessIndex extends React.Component {
                             ))
                         }
                     </div>
+                    <BusinessMap />
                 </div>
             </div>
         )
