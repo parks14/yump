@@ -14,7 +14,6 @@ const mDTP = dispatch => {
     return {
         fetchBusinesses: () => dispatch(fetchBusinesses()),
         fetchReviews: () => dispatch(fetchReviews())
-        // fetchReviews: businessId => dispatch(fetchReviews(businessId))
     }
 };
 

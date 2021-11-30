@@ -47,10 +47,9 @@ export const clearReviewErrors = () => ({
 export const fetchReviews = () => dispatch => {
     return (
         ReviewAPIUtil.fetchReviews()
-            .then(reviews => {
-                dispatch(receiveReviews(reviews));
-                dispatch(clearReviewErrors());
-            })
+            .then(reviews => 
+                dispatch(receiveReviews(reviews))
+            )
     )
 };
 
@@ -63,10 +62,9 @@ export const fetchReviews = () => dispatch => {
 export const fetchReview = reviewId => dispatch => {
     return (
         ReviewAPIUtil.fetchReview(reviewId)
-            .then(review => {
-                dispatch(receiveReview(review));
-                dispatch(clearReviewErrors());
-            })
+            .then(review => 
+                dispatch(receiveReview(review))
+            )
     )
 };
 

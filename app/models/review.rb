@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-    validates :rating, inclusion: { in: (1..5) }
+    validates :rating, presence: true, inclusion: { in: (1..5) } 
     validates :body, presence: true
 
     belongs_to :business

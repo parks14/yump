@@ -13,7 +13,7 @@ const mSTP = (state, ownProps) => {
         businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors.reviews,
+        errors: Object.values(state.errors.reviews),
         formType: 'Create Review'
     }
 };
