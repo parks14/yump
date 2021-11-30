@@ -18,7 +18,7 @@ class EditReviewForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId)
-        this.props.fetchReviews(this.props.match.params.businessId)
+        // this.props.fetchReviews(this.props.match.params.businessId)
     };
 
     handleSubmit(e) {
@@ -34,19 +34,19 @@ class EditReviewForm extends React.Component {
     }
 
     renderErrors() {
-        if (!this.props.errors) {
-            return null
-        } else {
+        // if (!this.props.errors) {
+        //     return null
+        // } else {
             return (
                 <ul className="review-errors">
-                    {this.props.errors.reviews.map((error, i) => (
+                    {this.props.errors.map((error, i) => (
                         <li key={`error-${i}`}>
                             {error}
                         </li>
                     ))}
                 </ul>
             );
-        }
+        // }
     };
 
     render() {

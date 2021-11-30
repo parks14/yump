@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
         businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors.review,
+        errors: state.errors.reviews,
         formType: 'Edit Review'
     }
 };
@@ -20,10 +20,10 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-        fetchReviews: businessId => dispatch(fetchReviews(businessId)),
+        // fetchReviews: businessId => dispatch(fetchReviews(businessId)),
         // fetchReview: (businessId, reviewId) => dispatch(fetchReview(businessId, reviewId)),
         processForm: (review, businessId) => dispatch(updateReview(review, businessId)),
-        // clearReviewErrors: () => dispatch(clearReviewErrors())
+        clearReviewErrors: () => dispatch(clearReviewErrors())
     }
 };
 
