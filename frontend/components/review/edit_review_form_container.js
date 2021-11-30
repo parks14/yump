@@ -7,12 +7,12 @@ import EditReviewForm from "./edit_review_form";
 const mSTP = (state, ownProps) => {
     const business = state.entities.businesses[ownProps.match.params.businessId]
     return {
-        review: business.reviews[ownProps.match.params.reviewId],
+        review: state.entities.reviews[ownProps.match.params.reviewId],
         business: business,
         businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors.reviews,
+        errors: Object.values(state.errors.reviews),
         formType: 'Edit Review'
     }
 };
@@ -20,8 +20,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-        // fetchReviews: businessId => dispatch(fetchReviews(businessId)),
-        // fetchReview: (businessId, reviewId) => dispatch(fetchReview(businessId, reviewId)),
+        // fetchReviews: () => dispatch(fetchReviews()),
+        fetchReview: reviewId => dispatch(fetchReview(reviewId)),
         processForm: (review, businessId) => dispatch(updateReview(review, businessId)),
         clearReviewErrors: () => dispatch(clearReviewErrors())
     }

@@ -16,7 +16,7 @@ class CreateReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBusiness(this.props.match.params.businessId)
+        this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.clearReviewErrors();
     };
 
@@ -91,7 +91,7 @@ class CreateReviewForm extends React.Component {
                                 <textarea className="review-body" onChange={this.handleChange("body")} value={this.state.body} 
                                     placeholder="Please leave your review here.">
                                 </textarea>
-                                <div className="error-messages">{this.renderErrors()}</div>
+                                <div>{this.renderErrors()}</div>
                                 <div className="thank-you">Thanks for supporting, especially right now.</div>
                             </div>
                             <div>
