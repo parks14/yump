@@ -19,10 +19,7 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json: {
-                rating: "To submit your review, please select a star rating for this business.",
-                body: "To submit your review, please explain your rating to others."}, 
-                status: 422
+            render json: @review.errors, status: 422
         end
     end
 
