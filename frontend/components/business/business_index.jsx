@@ -34,7 +34,9 @@ class BusinessIndex extends React.Component {
                             ))
                         }
                     </div>
-                    <BusinessMap />
+                    <BusinessMap 
+                        businesses={businesses}
+                    />
                 </div>
             </div>
         )

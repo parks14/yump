@@ -6,6 +6,7 @@
     background-color: white;
     top: 0;
     font-family: $main-font;
+    z-index: 2;
 }
 
 .navbar-search {
@@ -16,6 +17,7 @@
     align-items: center;
     padding: 14px 17px;
     border-bottom: 1px solid lightgray;
+    // z-index: 99;
 }
 
 .logo {
@@ -108,6 +110,7 @@
     }
     i {
         cursor: pointer;
+        // position: relative;
     }
 }
 
