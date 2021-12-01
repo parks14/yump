@@ -65,6 +65,19 @@ class BusinessIndexItem extends React.Component {
         return count;
     }
 
+    randomReview() {
+        const { reviews, business } = this.props;
+        const reviewsArr = Object.values(reviews);
+        const result = reviewsArr.filter(review =>
+            review.business_id === business.id);
+
+        return (
+            <div>
+                <i className="far fa-comment-alt fa-1x"></i> {result[0].body}
+            </div>
+        );
+    }
+
     render() {
         const { business } = this.props;
         return (
@@ -86,7 +99,9 @@ class BusinessIndexItem extends React.Component {
                         <div>
                             <div className="index-item-category">{business.category}</div>
                         </div>
-
+                        <div className="random-review">
+                            {this.randomReview()}
+                        </div>
                     </div>
                 </div>
             </div>
