@@ -4,10 +4,11 @@
 }
 
 .filters-container {
-    margin-top: 80px;
+    margin-top: 100px;
     height: 100vh;
-    width: 160px;
-    padding: 20px;
+    width: 200px;
+    padding: 20px 40px;
+    font-family: $main-font;
 }
 
 .price-buttons {
@@ -17,27 +18,26 @@
 }
 
 .filters-title {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .price-buttons {
-    padding: 15px 0 13px 0;
+    padding: 17px 0;
     border-bottom: 1px solid lightgray;
     button {
-        font-size: 8px;
+        font-size: 11px;
         font-weight: 500;
-        width: 35px;
+        width: 50px;
         background-color: white;
         border: 1px solid lightgray;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 7px 0;
         cursor: pointer;
         &:first-child {
-            border-radius: 10px 0 0 10px;
+            border-radius: 15px 0 0 15px;
         }
         &:last-child {
-            border-radius: 0 10px 10px 0;
+            border-radius: 0 15px 15px 0;
         }
         &:hover {
             background-color: lightgray;
@@ -51,17 +51,17 @@
 .category-filter-container {
     padding: 15px 0 13px 0;
     div {
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 600;
     }
     button {
-        font-size: 8px;
+        font-family: $main-font;
+        font-size: 12px;
         font-weight: 500;
         background-color: white;
         border: 1px solid lightgray;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-radius: 10px;
+        padding: 6px 12px;
+        border-radius: 17px;
         margin: 0 5px 5px 0;
         &:hover {
             background-color: lightgray;
@@ -79,15 +79,15 @@
 }
 
 .business-body {
-    margin-top: 80px;
+    margin-top: 100px;
     padding-top: 20px;
     font-family: $main-font;
-    width: 47%;
+    width: 48%;
 }
 
 .result-title {
     font-family: $main-font;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     margin: 4px 0 5px 0;
 }
@@ -101,16 +101,15 @@
         display: flex;
         border: 1px solid lightgray;
         border-radius: 3px;
-        padding: 15px;
+        padding: 20px;
         margin: 20px 20px 15px 0;
         &:hover {
         box-shadow: 0 0 3px 1px #e6e6e6;
     }
 
         .img-container {
-            height: 150px;
-            width: 150px;
-        
+            height: 230px;
+            width: 230px;
     
             .index-photo {
                 height: 100%;
@@ -120,21 +119,21 @@
         }
 
         .info-container {
-            padding-left: 15px;
+            padding-left: 20px;
             display: flex;
             flex-direction: column;
 
             .index-item-name {
                 font-weight: bold;
-                font-size: 15px;
+                font-size: 20px;
             }
 
             .index-item-category {
-                font-size: 9px;
+                font-size: 12px;
                 font-weight: bold;
                 color: #4a4646;
                 border: 1px solid #E7E7E7;
-                border-radius: 2px;
+                border-radius: 3px;
                 background-color: #E7E7E7;
                 padding: 2px;
                 display: inline-block;
@@ -145,9 +144,15 @@
 }
 
 .average-rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    padding: 12px 0 8px 0;
+    color: gray;
+    font-size: 14px;
     img {
-        width: 65px;
-        padding-top: 8px;
+        width: 110px;
     }
 }
 

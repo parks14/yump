@@ -35,7 +35,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
                 {userDisplay}
                 <div className="links-logo-container">
                     <a href="https://github.com/parks14/yump" target="blank"><img src={window.gitdark} /></a>
-                    <a href=""><img src={window.linkedin} /></a>
+                    <a href="https://www.linkedin.com/in/sohee-park-b8164a112/" target="blank"><img src={window.linkedin} /></a>
                 </div>
             </div>
         </div>

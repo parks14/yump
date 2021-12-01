@@ -7,19 +7,18 @@
 }
 
 .business-header {
-    height: 286px;
     width: 100vw;
 
     .business-img-container {
         display: flex;
         z-index: -99;
-        height: 286px;
+        height: 420px;
         width: 100%;
         overflow: hidden;
         position: absolute;
 
         .business-img {
-            width: 300px;
+            width: 400px;
             height: 100%;
             top: 50%;
             left: 50%;
@@ -27,31 +26,34 @@
     }
     
     .business-header-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         position: relative;
+        height: 395px;
         color: white;
-        padding-top: 160px;
         padding-left: 20%;
         font-family: $main-font;
         .business-name {
-            font-size: 35px;
+            font-size: 50px;
             font-weight: 700;
         }
     }
     
     .price-category-container, .hours {
-        font-size: 11px;
+        font-size: 16px;
         font-weight: 600;
     }
     .rating {
         display: flex;
         align-items: center;
-        padding: 8px 0;
+        padding: 15px 0;
         img {
-            width: 120px;
+            width: 170px;
         }
         .review-text {
             padding-left: 1%;
-            font-size: 11px;
+            font-size: 15px;
             font-weight: 600;
         }
     }
@@ -67,13 +69,14 @@
 
 .right-sidebar {
     position: fixed;
-    width: 270px;
-    right: 10%;
-    top: 380px;
+    width: 330px;
+    right: 20%;
+    top: 540px;
     border: 1px solid lightgray;
-    font-size: 11px;
+    border-radius: 3px;
+    font-size: 15px;
     font-weight: 500;
-    padding: 12px;
+    padding: 20px;
 
     a {
         text-decoration: none;
@@ -82,7 +85,7 @@
 
     .website-container {
         border-bottom: 1px solid lightgray;
-        padding-bottom: 20px;
+        padding-bottom: 35px;
         font-weight: 600;
         a {
             float: left;
@@ -94,8 +97,8 @@
 
     .number-container {
         border-bottom: 1px solid lightgray;
-        padding-top: 12px;
-        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 35px;
         .number {
             float: left;
         }
@@ -105,7 +108,7 @@
     }
 
     .address-container {
-        padding-top: 12px;
+        padding-top: 20px;
         p {
             color: gray;
             float: left;
@@ -117,20 +120,20 @@
 }
 
 .details-container {
-    padding: 25px 40% 0 20%;
+    padding: 45px 40% 0 20%;
     .button-container {
-        padding-bottom: 15px;
+        padding-bottom: 30px;
         border-bottom: 1px solid lightgray;
     }
     .write-review-button {
         border: 1px solid $bright-red;
-        border-radius: 2px;
+        border-radius: 3px;
         color: white;
         background-color: $bright-red;
-        font-size: 11px;
+        font-size: 18px;
         font-family: $main-font;
         font-weight: 500;
-        padding: 3px 8px;
+        padding: 3px 12px;
         &:hover {
             cursor: pointer;
         }
@@ -138,28 +141,28 @@
 
     .location-hours-container {
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
         border-bottom: 1px solid lightgray;
         display: inline-block;
         width: 100%;
         .location-title {
             font-weight: 700;
-            font-size: 13px;
-            padding-bottom: 15px;
+            font-size: 20px;
+            padding-bottom: 25px;
         }
         .location {
             float: left;
             .map-snippet {
-                width: 210px;
-                height: 100px;
+                width: 310px;
+                height: 160px;
                 img {
-                    width: 210px;
-                    height: 100px;
+                    width: 310px;
+                    height: 160px;
                 }
             }
             .address {
                 padding-top: 15px;
-                font-size: 10px;
+                font-size: 14px;
                 .street-address {
                     color: $teal;
                     font-weight: 500;
@@ -169,19 +172,19 @@
         .hours-container {
             display: flex;
             padding-left: 14%;
-            font-size: 10px;
+            font-size: 16px;
             font-weight: 500;
             .days {
                 float: left;
                 p {
-                    padding-top: 6px;
+                    padding-top: 8px;
                 }
             }
             .hours {
                 float: right;
                 padding-left: 9%;
                 p {
-                    padding-top: 6px;
+                    padding-top: 8px;
                     padding-right: 25px;
                 }
             }
@@ -192,7 +195,7 @@
         padding-top: 20px;
         .reviews-title {
             font-weight: 700;
-            font-size: 13px;
+            font-size: 20px;
         }
         .write-review-container {
             border: 1px solid lightgray;
@@ -201,12 +204,14 @@
             padding: 10px;
             width: 90%;
             display: flex;
+            justify-content: space-between;
             .author-container {
                 font-size: 12px;
                 font-weight: 600;
                 height: 50px;
                 width: 170px;
                 display: flex;
+                align-items: center;
             .author-name {
                 padding-left: 2%;
             }
@@ -216,7 +221,7 @@
     }
             .create-review-link {
                 color: $teal;
-                font-size: 10px;
+                font-size: 14px;
                 font-weight: 500;
                 text-decoration: none;
                 display: flex;

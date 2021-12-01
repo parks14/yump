@@ -54,6 +54,17 @@ class BusinessIndexItem extends React.Component {
         }
     }
 
+    reviewCount() {
+        const { reviews, business } = this.props;
+        let count = 0; 
+        reviews.forEach(review => {
+            if (review.business_id === business.id) {
+                count += 1
+            }
+        })
+        return count;
+    }
+
     render() {
         const { business } = this.props;
         return (
@@ -65,7 +76,12 @@ class BusinessIndexItem extends React.Component {
                     <div className="info-container">
                         <div className="index-item-name">{business.name}</div>
                         <div className="average-rating-container">
-                            {this.ratingImage()}
+                            <div>
+                                {this.ratingImage()}
+                            </div>
+                            <div>
+                                {this.reviewCount()}
+                            </div> 
                         </div>
                         <div>
                             <div className="index-item-category">{business.category}</div>
