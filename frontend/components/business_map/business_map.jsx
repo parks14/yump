@@ -13,7 +13,7 @@ const BusinessMap = ({ businesses }) => {
             lat: 40.7477, 
             lng: -73.9869
         },
-        zoom: 14
+        zoom: 15
     };
 
     useEffect(() => {
@@ -26,15 +26,12 @@ const BusinessMap = ({ businesses }) => {
                 const { name, lat, long } = business;
 
                 let marker = new window.google.maps.Marker({
-                    position: {lat: Number(lat), lng: Number(long)},
+                    position: {lat: lat, lng: long},
                     map,
                     // title: name,
                     animation: window.google.maps.Animation.DROP
                 })
 
-                const latitude = Number(lat);
-                const longitude = Number(long);
-                console.log(businesses[0])
                 map.setCenter({lat: businesses[0].lat, lng: businesses[0].long})
             })
         }
