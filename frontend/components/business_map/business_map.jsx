@@ -10,7 +10,7 @@ const BusinessMap = ({ businesses }) => {
             lat: 40.7477, 
             lng: -73.9869
         },
-        zoom: 16
+        zoom: 14
     };
 
     useEffect(() => {
