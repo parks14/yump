@@ -107,7 +107,6 @@ class BusinessIndexItem extends React.Component {
             </div>
         );
     }
-    
 }
 
 export default withRouter(BusinessIndexItem);

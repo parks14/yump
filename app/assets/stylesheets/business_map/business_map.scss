@@ -12,6 +12,7 @@
 }
 
 #info-container {
+    font-family: $main-font;
     width: 200px;
     height: 250px;
     img {
@@ -20,4 +21,13 @@
         overflow: hidden;
         border-radius: 3px;
     }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.gm-ui-hover-effect {
+    display: none !important;
 }

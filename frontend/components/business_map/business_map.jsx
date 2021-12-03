@@ -20,7 +20,7 @@ const BusinessMap = ({ businesses }) => {
             const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
 
             businesses.map(business => {
-                const { name, lat, long, category, photoUrls } = business;
+                const { name, lat, long, category, photoUrls, id } = business;
                 const index = (businesses.indexOf(business) + 1).toString();
 
                 let marker = new window.google.maps.Marker({
@@ -37,7 +37,7 @@ const BusinessMap = ({ businesses }) => {
                     photoUrls[0] + 
                     '/><h1>' + 
                     name + 
-                    '</h1><div id="info-address">' +
+                    '</h1><div id="label-category">' +
                     category +
                     '</div></div>';                
 
@@ -52,6 +52,10 @@ const BusinessMap = ({ businesses }) => {
                     infoWindow.close(map, marker);
                 }))
 
+                marker.addListener('click', (() => {
+                    window.location.href = `#/businesses/${id}`;
+                }))
+
                 map.setCenter({lat: businesses[0].lat, lng: businesses[0].long})
             })
         }
@@ -59,12 +63,16 @@ const BusinessMap = ({ businesses }) => {
         initMap();
     }, [businesses]);
 
-    return (
-        <div className="map-container">
-            <div className="map" ref={googleMapRef}>
+    // if (!window.google) {
+    //     return null
+    // } else {
+        return (
+            <div className="map-container">
+                <div className="map" ref={googleMapRef}>
+                </div>
             </div>
-        </div>
-    )
+        )
+    // }
 }
 
 export default withRouter(BusinessMap);
