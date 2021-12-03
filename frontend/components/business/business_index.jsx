@@ -30,6 +30,7 @@ class BusinessIndex extends React.Component {
                                     business={business}
                                     reviews={reviews}
                                     key={business.id}
+                                    businesses={businesses}
                                 />
                             ))
                         }

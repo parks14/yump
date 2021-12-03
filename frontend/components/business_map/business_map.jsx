@@ -1,11 +1,8 @@
 import React , { useRef, useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import { withRouter } from "react-router-dom";
-import MarkerManager from "../../util/marker_manager";
 
 const BusinessMap = ({ businesses }) => {
-    // console.log(businesses)
-    // const [map, setMap] = useState();
     const googleMapRef = useRef();
 
     const mapOptions = {
@@ -13,7 +10,7 @@ const BusinessMap = ({ businesses }) => {
             lat: 40.7477, 
             lng: -73.9869
         },
-        zoom: 15
+        zoom: 16
     };
 
     useEffect(() => {
@@ -23,14 +20,37 @@ const BusinessMap = ({ businesses }) => {
             const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
 
             businesses.map(business => {
-                const { name, lat, long } = business;
+                const { name, lat, long, category, photoUrls } = business;
+                const index = (businesses.indexOf(business) + 1).toString();
 
                 let marker = new window.google.maps.Marker({
                     position: {lat: lat, lng: long},
                     map,
-                    // title: name,
+                    label: index,
                     animation: window.google.maps.Animation.DROP
                 })
+
+                let infoWindow = new window.google.maps.InfoWindow();
+
+                const contentInfo =
+                    '<div id="info-container"><div><img className="marker-photo" src=' + 
+                    photoUrls[0] + 
+                    '/><h1>' + 
+                    name + 
+                    '</h1><div id="info-address">' +
+                    category +
+                    '</div></div>';                
+
+                marker.addListener("mouseover", (() => {
+                    infoWindow.setContent(
+                        contentInfo
+                    );
+                    infoWindow.open(map, marker);
+                }))
+
+                marker.addListener('mouseout', (() => {
+                    infoWindow.close(map, marker);
+                }))
 
                 map.setCenter({lat: businesses[0].lat, lng: businesses[0].long})
             })
@@ -44,7 +64,6 @@ const BusinessMap = ({ businesses }) => {
             <div className="map" ref={googleMapRef}>
             </div>
         </div>
-        
     )
 }
 

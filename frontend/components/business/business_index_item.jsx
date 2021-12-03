@@ -79,7 +79,7 @@ class BusinessIndexItem extends React.Component {
     }
 
     render() {
-        const { business } = this.props;
+        const { business, businesses } = this.props;
         return (
             <div className="business-index-item" onClick={this.handleClick}>
                 <div className="index-item-info">
@@ -87,7 +87,7 @@ class BusinessIndexItem extends React.Component {
                         <img className="index-photo" src={business.photoUrls[0]} />
                     </div>
                     <div className="info-container">
-                        <div className="index-item-name">{business.name}</div>
+                        <div className="index-item-name">{businesses.indexOf(business) + 1}. {business.name}</div>
                         <div className="average-rating-container">
                             <div>
                                 {this.ratingImage()}
