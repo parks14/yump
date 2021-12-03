@@ -13,15 +13,33 @@ const BusinessMap = ({ businesses }) => {
             lat: 40.7477, 
             lng: -73.9869
         },
-        zoom: 15
+        zoom: 14
     };
 
     useEffect(() => {
+        // window.google = undefined;
 
-        const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
-        // const markerManager = new MarkerManager(map);
-        // markerManager.updateMarkers(businesses);
-        console.log(businesses)
+        const initMap = () => {
+            const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
+
+            businesses.map(business => {
+                const { name, lat, long } = business;
+
+                let marker = new window.google.maps.Marker({
+                    position: {lat: Number(lat), lng: Number(long)},
+                    map,
+                    // title: name,
+                    animation: window.google.maps.Animation.DROP
+                })
+
+                const latitude = Number(lat);
+                const longitude = Number(long);
+                console.log(businesses[0])
+                map.setCenter({lat: businesses[0].lat, lng: businesses[0].long})
+            })
+        }
+
+        initMap();
     }, [businesses]);
 
     return (
