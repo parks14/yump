@@ -10,7 +10,6 @@ const mSTP = (state, ownProps) => {
     const business = state.entities.businesses[ownProps.match.params.businessId]
     return {
         reviews: business.reviews,
-        // author: state.entities.users[review.author_id],
         businesses: state.entities.businesses,
         businessId: ownProps.match.params.businessId,
         currentUserId: state.session.id,
@@ -23,10 +22,8 @@ const mDTP = dispatch => {
         fetchReviews: businessId => dispatch(fetchReviews(businessId)),
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
         updateReview: (review, businessId) => dispatch(updateReview(review, businessId)),
-        // deleteReview: (review, businessId) => dispatch(deleteReview(review, businessId))
         deleteReview: reviewId => dispatch(deleteReview(reviewId))
     }
 };
 
 export default withRouter(connect(mSTP, mDTP)(ReviewList));
-// export default connect(mSTP, mDTP)(ReviewListItem);

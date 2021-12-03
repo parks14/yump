@@ -9,17 +9,6 @@ const reviewsReducer = (prevState = {}, action) => {
     Object.freeze(prevState);
     let nextState = Object.assign({}, prevState);
 
-    // switch (action.type) {
-    //     case RECEIVE_REVIEWS:
-    //         return action.reviews; 
-    //     case RECEIVE_REVIEW:
-    //         return Object.assign({}, { [action.res.id]: action.res });
-    //     case REMOVE_REVIEW:
-    //         delete nextState[action.review.id]
-    //         return nextState;
-    //     default:
-    //         return oldState;
-    // }
     switch (action.type) {
         case RECEIVE_REVIEWS:
             return action.reviews; 

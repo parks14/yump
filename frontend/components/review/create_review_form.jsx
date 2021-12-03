@@ -34,9 +34,9 @@ class CreateReviewForm extends React.Component {
     }
 
     renderErrors() {
-        // if (!this.props.errors) {
-        //     return null 
-        // } else {
+        if (!this.props.errors) {
+            return null 
+        } else {
             return (
                 <ul className="review-errors">
                     {this.props.errors.map((error, i) => (
@@ -46,7 +46,7 @@ class CreateReviewForm extends React.Component {
                     ))}
                 </ul>
             );
-        // }
+        }
     };
 
     render() {

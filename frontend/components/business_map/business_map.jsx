@@ -4,7 +4,8 @@ import { withRouter } from "react-router-dom";
 import MarkerManager from "../../util/marker_manager";
 
 const BusinessMap = ({ businesses }) => {
-    // const [map, setMap] = useState(null);
+    // console.log(businesses)
+    // const [map, setMap] = useState();
     const googleMapRef = useRef();
 
     const mapOptions = {
@@ -16,21 +17,12 @@ const BusinessMap = ({ businesses }) => {
     };
 
     useEffect(() => {
-        const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
-        const markerManager = new MarkerManager(map);
-        markerManager.updateMarkers(businesses);
-    }, []);
 
-    // registerListeners() {
-    //     window.google.maps.event.addListener(map, 'idle', () => {
-    //         const { north, south, east, west } = map.getBounds().JSON();
-    //         const bounds = {
-    //             northEast: { lat: north, lng: east },
-    //             southWest: { lat: south, lng: west}
-    //         };
-    //         updateFilter('bounds', bounds)
-    //     })
-    // }
+        const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
+        // const markerManager = new MarkerManager(map);
+        // markerManager.updateMarkers(businesses);
+        console.log(businesses)
+    }, [businesses]);
 
     return (
         <div className="map-container">
