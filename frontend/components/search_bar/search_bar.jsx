@@ -8,18 +8,32 @@ class SearchBar extends React.Component {
             find: '',
             near: ''
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
-    
+
+    handleChange(field) {
+        return (e) => this.setState({
+            [field]: e.currentTarget.value
+        }) 
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        let find = this.state.find;
+        let near = this.state.near;
+        this.props.history.push(`/businesses?find=${find}&near=${near}`)
+    }
+
     render() {
         return (
-            <div className="search-bar-container">
-                <div className="search-bar">
-                    <input type="text" placeholder="korean"/>
-                </div>    
-                <div className="search-button-container">
-                    <i className="fas fa-search fa-1x"></i>
-                </div>
-            </div>
+            <form className="search-bar" onSubmit={this.handleSubmit}>
+                <span className="input-label">Find</span>
+                <input type="text" placeholder="korean, szechuan, japanese..." value={this.state.find} onChange={this.handleChange("find")}/>
+                <span className="input-label">Near</span>
+                <input type="text" placeholder="New York" value={this.state.near} onChange={this.handleChange("near")}/>
+                <button type="submit"><i className="fas fa-search"></i></button>
+            </form>
         )
     }
 }
