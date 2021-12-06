@@ -19,7 +19,6 @@ class EditReviewForm extends React.Component {
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.clearReviewErrors();
-        // this.props.fetchReviews(this.props.match.params.businessId)
     };
 
     handleSubmit(e) {

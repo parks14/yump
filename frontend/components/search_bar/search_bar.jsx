@@ -1,7 +1,16 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-const SearchBar = () => {
+class SearchBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            find: '',
+            near: ''
+        };
+    }
+    
+    render() {
         return (
             <div className="search-bar-container">
                 <div className="search-bar">
@@ -12,6 +21,7 @@ const SearchBar = () => {
                 </div>
             </div>
         )
+    }
 }
 
 export default withRouter(SearchBar)

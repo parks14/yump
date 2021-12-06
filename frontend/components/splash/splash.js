@@ -14,7 +14,6 @@ const Splash = () => {
                 </div>
                 <div className="splash-search">
                     <Link to="/"><img src={window.logo} className="splash-logo" /></Link>
-                    
                     <SearchBar />
                 </div>
             </div>
