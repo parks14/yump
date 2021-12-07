@@ -1,0 +1,42 @@
+.search-bar {
+    font-family: $main-font;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    background-color: white;
+    border-radius: 4px;
+
+    span, input {
+        font-size: 18px;
+        height: 100%;
+    }
+
+    span {
+        background-color: white;
+        font-weight: 600;
+        color: #666666;
+        padding: 6px 10px;
+        &:first-of-type {
+            border-radius: 4px 0 0 4px;
+        }
+        &:last-of-type {
+            border-left: 1px solid lightgray;
+        }
+    }
+    
+    input {
+        border: none;
+        padding: 6px;
+        width: 50%;
+    }
+
+    button {
+        font-size: 18px;
+        color: white;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background-color: $dark-red;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+}
