@@ -22,6 +22,7 @@ const App = () => (
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <ProtectedRoute exact path="/businesses/:businessId/reviews/new" component={CreateReviewFormContainer} />
             <ProtectedRoute exact path="/businesses/:businessId/reviews/:reviewId/edit" component={EditReviewFormContainer} />
+            <Route path='/businesses?find=:find&near=:near' component={BusinessIndexContainer} />
             <Route path="/404" component={PageNotFound} />
             <Redirect to="/404" />
         </Switch>
