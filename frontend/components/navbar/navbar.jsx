@@ -5,11 +5,11 @@ const Navbar = ({ currentUser, logout, props }) => {
     const userDisplay = currentUser ? (
             <div className="navbar-dropdown">
                 <button className="navbar-dropdown-button">
-                    <i className="far fa-user fa-2x"></i>
+                    <i className="fas fa-user-circle fa-2x"></i>
                 </button>
                 <div className="navbar-dropdown-content">
                     <div className="greeting-container">
-                        <i className="far fa-user fa-3x"></i>
+                        <i className="fas fa-user-circle fa-2x"></i>
                         <h2>{currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
                     </div>
                 <div className="about-me">

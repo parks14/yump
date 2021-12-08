@@ -24,6 +24,13 @@
             background-color: $bright-red;
         }
     }
+    .businesses {
+        color: black;
+        text-decoration: none;
+        &:hover {
+            border-bottom: 1px solid black;
+        }
+    }
 }
 
 .logo {
@@ -93,7 +100,7 @@
 
 .modal-search {
     position: absolute;
-    display: none;
+    // display: none;
     flex-direction: column;
     border: 1px solid lightgray;
     background-color: white;

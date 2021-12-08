@@ -11,6 +11,7 @@ import PageNotFound from "./page_not_found";
 import { Link } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Splash from "./splash/splash";
+import SearchResultContainer from "../components/search_result/search_result_container";
 
 const App = () => (
     <div>
@@ -22,7 +23,7 @@ const App = () => (
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <ProtectedRoute exact path="/businesses/:businessId/reviews/new" component={CreateReviewFormContainer} />
             <ProtectedRoute exact path="/businesses/:businessId/reviews/:reviewId/edit" component={EditReviewFormContainer} />
-            <Route path='/businesses?find=:find&near=:near' component={BusinessIndexContainer} />
+            <Route exact path="/search" component={SearchResultContainer} />
             <Route path="/404" component={PageNotFound} />
             <Redirect to="/404" />
         </Switch>

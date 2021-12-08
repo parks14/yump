@@ -28,6 +28,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
             <div className="home-link">
                 <Link to="/"><img src={window.logo} className="logo" /></Link>
             </div>
+            <Link className="businesses" to="/businesses">Businesses</Link>
             <SearchBar />
             <div className="buttons-container">
                 {userDisplay}
