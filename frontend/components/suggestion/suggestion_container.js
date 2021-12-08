@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
+import Suggestion from "./suggestion";
 import { fetchBusinesses } from "../../actions/business_actions";
 import { fetchReviews } from "../../actions/review_actions";
-import Suggestion from "./suggestion";
 
 const mSTP = state => {
     return {
