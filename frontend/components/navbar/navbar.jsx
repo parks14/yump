@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ currentUser, logout, props }) => {
     const userDisplay = currentUser ? (
             <div className="navbar-dropdown">
-                <button className="navbar-dropdown-button">
-                    <i className="fas fa-user-circle fa-2x"></i>
-                </button>
+                <button className="navbar-dropdown-button"><i className="fas fa-user-circle fa-2x"></i></button>
                 <div className="navbar-dropdown-content">
                     <div className="greeting-container">
                         <i className="fas fa-user-circle fa-2x"></i>
