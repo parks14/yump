@@ -68,6 +68,8 @@
     position: relative;
     button {
         cursor: pointer;
+        background-color: transparent;
+        border: none;
     }
     &:hover .navbar-dropdown-content{
         display: block;
