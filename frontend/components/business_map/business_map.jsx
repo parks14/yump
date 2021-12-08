@@ -14,13 +14,11 @@ const BusinessMap = ({ businesses }) => {
     };
 
     useEffect(() => {
-        // window.google = undefined;
-
         const initMap = () => {
             const map = new window.google.maps.Map(googleMapRef.current, mapOptions);
 
             businesses.map(business => {
-                const { name, lat, long, category, photoUrls } = business;
+                const { id, name, lat, long, category, photoUrls } = business;
                 const index = (businesses.indexOf(business) + 1).toString();
 
                 let marker = new window.google.maps.Marker({
@@ -50,6 +48,10 @@ const BusinessMap = ({ businesses }) => {
 
                 marker.addListener('mouseout', (() => {
                     infoWindow.close(map, marker);
+                }))
+
+                 marker.addListener('click', (() => {
+                    window.location.href = `#/businesses/${id}`;
                 }))
 
                 map.setCenter({lat: businesses[0].lat, lng: businesses[0].long})

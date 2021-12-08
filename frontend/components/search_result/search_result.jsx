@@ -64,7 +64,10 @@ class SearchResult extends React.Component {
 
     render() {
         const { businesses } = this.state;
-        const { reviews } = this.props;
+        const { reviews, location } = this.props;
+        let params = new URLSearchParams(location.search);
+        let find = params.get("find").replace('%20', ' ').toLowerCase();
+        let near = params.get("near").replace('%20', ' ').toLowerCase();
 
         return (
             <div>
@@ -74,6 +77,7 @@ class SearchResult extends React.Component {
                 <div className="index-body-container">
                     <div><FilterSidebarContainer /></div>
                     <div className="business-body">
+                        <h3>{near} &gt; {find}</h3>
                         <h1 className="result-title">All Results</h1>
                         { businesses.length !== 0 ? 
                             businesses.map(business => (

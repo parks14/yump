@@ -84,7 +84,12 @@
     padding-top: 20px;
     font-family: $main-font;
     width: 45%;
-    // z-index: 1;
+    h3 {
+        font-size: 12px;
+        font-weight: 500;
+        color: gray;
+        padding-bottom: 10px;
+    }
 }
 
 .result-title {
