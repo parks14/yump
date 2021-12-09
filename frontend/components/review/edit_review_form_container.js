@@ -20,7 +20,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-        // fetchReviews: () => dispatch(fetchReviews()),
         fetchReview: reviewId => dispatch(fetchReview(reviewId)),
         processForm: (review, businessId) => dispatch(updateReview(review, businessId)),
         clearReviewErrors: () => dispatch(clearReviewErrors())

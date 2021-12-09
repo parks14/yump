@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Splash from "./splash/splash";
 import SearchResultContainer from "../components/search_result/search_result_container";
+import Footer from "./footer/footer";
 
 const App = () => (
     <div>
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/404" component={PageNotFound} />
             <Redirect to="/404" />
         </Switch>
+        {/* <Footer /> */}
     </div>
 );
 

@@ -9,7 +9,7 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
                 <i className="fas fa-user-circle fa-2x"></i>
                 <div className="modal-search">
                     <h2 className="user-search">Hello {currentUser.first_name} {currentUser.last_name.split("")[0].toUpperCase()}.</h2>
-                    <i className="fas fa-user fa-1x">  About Me</i>
+                    <a href="https://soheepark.net/" target="blank"><i className="fas fa-user fa-1x">About Me</i></a>
                     <button className="logout-button-search" onClick={logout}>Log Out</button>
                 </div>
             </div>
@@ -32,10 +32,6 @@ const NavbarSearch = ({ currentUser, logout, props }) => {
             <SearchBar />
             <div className="buttons-container">
                 {userDisplay}
-                <div className="links-logo-container">
-                    <a href="https://github.com/parks14/yump" target="blank"><img src={window.gitdark} /></a>
-                    <a href="https://www.linkedin.com/in/sohee-park-b8164a112/" target="blank"><img src={window.linkedin} /></a>
-                </div>
             </div>
         </div>
     )

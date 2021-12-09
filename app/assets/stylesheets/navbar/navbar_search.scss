@@ -45,16 +45,6 @@
     width: 250px;
 }
 
-.links-logo-container {
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    img {
-        width: 30px;
-        padding: 7px;
-    }
-}
-
 .buttons-container {
     width: 300px;
     display: flex;
@@ -109,7 +99,13 @@
     z-index: 99;
     box-shadow: $shadow;
     font-size: 14px;
-    
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     .user-search, i {
         padding-bottom: 5%;
         border-bottom: 1px solid lightgray;

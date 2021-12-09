@@ -5,17 +5,15 @@ import BusinessShow from './business_show';
 
 const mSTP = (state, ownProps) => {
     const business = state.entities.businesses[ownProps.match.params.businessId]
+    const currentUserId = state.session.id
     return {
         business: business,
-        currentUserId: state.session.id,
-        // reviews: business.reviews
-        // currentUser: Object.values(state.entities.users[state.session.id])
+        currentUser: state.entities.users[currentUserId]
     };
 };
 
 const mDTP = dispatch => ({
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-    // fetchReviews: businessId => dispatch(fetchReviews(businessId))
     fetchReviews: () => dispatch(fetchReviews())
 });
 

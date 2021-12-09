@@ -3,6 +3,7 @@ import BusinessIndexItem from "./business_index_item";
 import NavbarSearchContainer from "../navbar/navbar_search_container";
 import FilterSidebarContainer from "../filter/filter_sidebar_container";
 import BusinessMap from "../business_map/business_map";
+import Footer from "../footer/footer";
 
 class BusinessIndex extends React.Component {
     componentDidMount() {
@@ -37,6 +38,9 @@ class BusinessIndex extends React.Component {
                     <BusinessMap 
                         businesses={businesses}
                     />
+                </div>
+                <div className="index-footer">
+                    <Footer />
                 </div>
             </div>
         )

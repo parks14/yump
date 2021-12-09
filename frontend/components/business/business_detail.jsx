@@ -76,7 +76,7 @@ class BusinessDetail extends React.Component {
                            <img className="business-img" 
                                 src={photo} 
                                 key={`img-${i}`}
-                                /> 
+                            /> 
                         )
                     })}
                 </div>
@@ -155,7 +155,7 @@ class BusinessDetail extends React.Component {
                             <div className="author-icon">
                                 <i className="fas fa-user-circle fa-3x"></i>
                             </div>
-                            {/* <div className="author-name">{currentUser[1]} {currentUser[2][0]}</div> */}
+                            <div className="author-name">{currentUser.first_name} {currentUser.last_name[0]}.</div>
                         </div>
                         <Link to={`/businesses/${business.id}/reviews/new`} className="create-review-link">Start your review of {business.name}.</Link>
                     </div>

@@ -34,19 +34,15 @@ class EditReviewForm extends React.Component {
     }
 
     renderErrors() {
-        // if (!this.props.errors) {
-        //     return null
-        // } else {
-            return (
-                <ul className="review-errors">
-                    {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`}>
-                            {error}
-                        </li>
-                    ))}
-                </ul>
-            );
-        // }
+        return (
+            <ul className="review-errors">
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     };
 
     render() {
