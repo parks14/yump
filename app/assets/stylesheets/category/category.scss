@@ -1,16 +1,47 @@
 .browse-category-cont {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-family: $main-font;
+    margin: 100px 0;
+    padding: 50px 0;
+    background-color: #F5F5F5;
+    h1 {
+        padding-bottom: 15px;
+        font-size: 20px;
+        font-weight: 600;
+        color: $dark-red;
+    }
 }
 
 .category-list {
     display: flex;
+    align-items: center;
+    font-weight: 600;
     img {
-        width: 150px;
+        width: 100px;
+        padding: 15px;
+    }
+    p {
+        padding: 15px;
     }
 }
 
 .category {
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 180px;
     border: 1px solid lightgray;
+    border-radius: 4px;
+    margin: 15px;
+    overflow: hidden;
+    background-color: white;
+    &:nth-child(4) {
+        justify-content: flex-end;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 }

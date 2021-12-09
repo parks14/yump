@@ -57,7 +57,6 @@ class SearchResult extends React.Component {
                 ))
             }
         }
-
         this.setState({ businesses: results })
     }
     

@@ -63,7 +63,7 @@ class EditReviewForm extends React.Component {
                     <div className="create-review-container">
                         <div className="review-header-container">
                             <Link to={`/businesses/${business.id}`} className="review-title">{business.name}</Link>
-                            <a href="">Read our review guidelines</a>
+                            {/* <a href="">Read our review guidelines</a> */}
                         </div>
                         <div className="review-form-container">
                             <form onSubmit={this.handleSubmit}>
@@ -93,7 +93,6 @@ class EditReviewForm extends React.Component {
                                         placeholder="Please leave your review here.">
                                     </textarea>
                                     <div>{this.renderErrors()}</div>
-                                    <div className="thank-you">Thanks for supporting, especially right now.</div>
                                 </div>
                                 <div>
                                     <button className="post-review-button" type="submit" value={this.props.formType}>Post Review</button>

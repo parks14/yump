@@ -63,7 +63,7 @@ class CreateReviewForm extends React.Component {
                 <div className="create-review-container">
                     <div className="review-header-container">
                         <Link to={`/businesses/${business.id}`} className="review-title">{business.name}</Link>
-                        <a href="">Read our review guidelines</a>
+                        {/* <a href="">Read our review guidelines</a> */}
                     </div>
                     <div className="review-form-container">
                         <form onSubmit={this.handleSubmit}>
