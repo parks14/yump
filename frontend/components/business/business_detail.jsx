@@ -62,8 +62,22 @@ class BusinessDetail extends React.Component {
         }
     }
 
+    reviewAuthor() {
+        const { currentUser } = this.props;
+        if (currentUser) {
+            return (
+                <div className="author-name">{currentUser.first_name} {currentUser.last_name[0]}.</div>
+            )
+        } else {
+            return (
+                <div className="author-name">Please sign in.</div>
+            )
+        }
+    }
+
     render() {
         const { business, currentUser, reviews } = this.props;
+        console.log(this.props)
         if (!this.props.business) {
             return null
         } else {
@@ -155,7 +169,7 @@ class BusinessDetail extends React.Component {
                             <div className="author-icon">
                                 <i className="fas fa-user-circle fa-3x"></i>
                             </div>
-                            <div className="author-name">{currentUser.first_name} {currentUser.last_name[0]}.</div>
+                            {this.reviewAuthor()}
                         </div>
                         <Link to={`/businesses/${business.id}/reviews/new`} className="create-review-link">Start your review of {business.name}.</Link>
                     </div>
