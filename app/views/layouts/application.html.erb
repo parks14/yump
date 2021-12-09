@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Yump</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
     <meta property="og:title" content="Yump" />
     <meta property="og:image" content="<%= image_url('yump_pic.png') %>" />
     <meta property="og:description" content="Yump is a website that allows users to create and account and search restaurants by their category or location. Users can also leave reviews and ratings for a business." />
     <meta property="og:url" content="https://yump1.herokuapp.com/" />
 
-    <title>Yump</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
