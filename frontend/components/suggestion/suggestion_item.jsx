@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class SuggestionItem extends React.Component {
     constructor(props) {
@@ -61,10 +62,15 @@ class SuggestionItem extends React.Component {
         const { business } = this.props;
         return (
             <div className="suggestion-business-container">
-                <img src={business.photoUrls[0]} />
+                <div className="suggestion-img-container">
+                    <Link to={`/businesses/${business.id}`} ><img src={business.photoUrls[0]} /></Link>
+                </div>
                 <div className="business-info">
-                    <h2>{business.name}</h2>
-                    <div>{this.ratingImage()} {this.reviewCount()}</div>
+                    <Link to={`/businesses/${business.id}`} className="business-link"><h2>{business.name}</h2></Link>
+                    <div className="rating-cont">
+                        <div>{this.ratingImage()}</div> 
+                        <div className="count">{this.reviewCount()} reviews</div>
+                    </div>
                     <p>{business.category}</p>
                     <p>{business.city}, {business.state}</p>
                 </div>

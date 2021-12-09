@@ -1,3 +1,80 @@
 .suggestions-container {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 180px;
+    font-family: $main-font;
+    h1, h2 {
+        color: $dark-red;
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 21px;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 15px;
+    }
+    .suggestion-sub {
+        margin-top: 20px;
+    }
+}
+
+.suggestion-list {
+    display: flex;
+}
+
+.suggestion-business-container {
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 15px;
+    h2 {
+        color: $blue;
+    }
+}
+
+.suggestion-img-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+.business-info {
+    padding: 15px;
+    p {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .business-link {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline $blue;
+        }
+    }
+}
+
+.rating-cont {
+    display: flex;
+    align-items: center;
+    padding: 7px 0 0 0;
+    img {
+        width: 100px;
+    }
+    .count {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+}
+
+.more-businesses {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: $blue;
+    &:hover {
+        text-decoration: underline $blue;
+    }
 }

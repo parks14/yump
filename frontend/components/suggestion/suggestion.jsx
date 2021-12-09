@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SuggestionContainer from "./suggestion_container";
 import SuggestionItem from "./suggestion_item";
 
@@ -40,12 +40,10 @@ class Suggestion extends React.Component {
         }
 
         return (
-            <div className="suggestioins-container">
-                <div>
-                    Yump New York
-                </div>
+            <div className="suggestions-container">
+                <h1>Yump New York</h1>
+                <h2 className="suggestion-sub">Hot & New Businesses</h2>
                 <div className="suggestion-list">
-                    <h1>Hot Businesses</h1>
                     {
                         randomArr.map(business => (
                             <SuggestionItem
@@ -56,6 +54,7 @@ class Suggestion extends React.Component {
                         ))
                     }
                 </div>
+                <Link className="more-businesses" to="/businesses">See more hot and new businesses</Link>
             </div>
         )
     }
