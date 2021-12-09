@@ -1,0 +1,16 @@
+.browse-category-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-list {
+    display: flex;
+    img {
+        width: 150px;
+    }
+}
+
+.category {
+    width: 150px;
+    border: 1px solid lightgray;
+}

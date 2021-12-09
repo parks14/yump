@@ -4,6 +4,7 @@ import SearchBar from "../search_bar/search_bar";
 import NavbarContainer from "../navbar/navbar_container";
 import Navbar from "../navbar/navbar";
 import SuggestionContainer from "../suggestion/suggestion_container";
+import Category from "../category/category";
 
 const Splash = () => {
     return (
@@ -18,6 +19,7 @@ const Splash = () => {
                     <SearchBar />
                 </div>
                 <SuggestionContainer />
+                <Category />
             </div>
         </div>
     )

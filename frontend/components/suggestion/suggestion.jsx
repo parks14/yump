@@ -16,7 +16,6 @@ class Suggestion extends React.Component {
 
     randomBusiness() {
         const { businesses } = this.props;
-        console.log(businesses)
         const result = [];
         for (let i = 0; i < 3; i++) {
             const random = Math.floor(Math.random() * businesses.length);
@@ -25,7 +24,6 @@ class Suggestion extends React.Component {
             }
             result.push(businesses[random]);
         };
-        console.log(result)
         return result
     }
 
@@ -36,7 +34,6 @@ class Suggestion extends React.Component {
             return null;
         } else {
             randomArr = this.randomBusiness();
-            console.log(randomArr)
         }
 
         return (
