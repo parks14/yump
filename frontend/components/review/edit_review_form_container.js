@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { updateReview, fetchReviews, fetchReview } from "../../actions/review_actions";
-import { fetchBusiness } from "../../actions/business_actions";
+import { fetchBusiness, fetchBusinesses } from "../../actions/business_actions";
 import { clearReviewErrors } from "../../actions/review_actions";
 import EditReviewForm from "./edit_review_form";
 
@@ -21,6 +21,7 @@ const mDTP = dispatch => {
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
         fetchReview: reviewId => dispatch(fetchReview(reviewId)),
+        fetchReviews: () => dispatch(fetchReviews()),
         processForm: (review, businessId) => dispatch(updateReview(review, businessId)),
         clearReviewErrors: () => dispatch(clearReviewErrors())
     }

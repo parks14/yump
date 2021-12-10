@@ -16,6 +16,7 @@ class CreateReviewForm extends React.Component {
     }
 
     componentDidMount() {
+        this.props.fetchReviews();
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.clearReviewErrors();
     };
