@@ -76,8 +76,7 @@ class BusinessDetail extends React.Component {
     }
 
     render() {
-        const { business, currentUser, reviews } = this.props;
-        console.log(this.props)
+        const { business, reviews } = this.props;
         if (!this.props.business) {
             return null
         } else {
@@ -108,21 +107,21 @@ class BusinessDetail extends React.Component {
                     <div className="hours">{business.hours}</div>
                 </div>
             </div>
-            <div className="right-sidebar">
-                <div className="website-container">
-                    <a href={business.website} className="website" target="_blank">{business.website}</a>
-                    <i className="fas fa-external-link-alt"></i>
-                </div>
-                <div className="number-container">
-                    <div className="number">{business.phone_number}</div>
-                    <i className="fas fa-phone-alt"></i>
-                </div>
-                <div className="address-container">
-                    <p>{business.address} {business.city}, {business.state} {business.zip_code}</p>
-                    <i className="fas fa-directions"></i>
-                </div>
-            </div>
             <div className="details-container">
+                <div className="right-sidebar">
+                    <div className="website-container">
+                        <a href={business.website} className="website" target="_blank">{business.website}</a>
+                        <i className="fas fa-external-link-alt"></i>
+                    </div>
+                    <div className="number-container">
+                        <div className="number">{business.phone_number}</div>
+                        <i className="fas fa-phone-alt"></i>
+                    </div>
+                    <div className="address-container">
+                        <p>{business.address} {business.city}, {business.state} {business.zip_code}</p>
+                        <i className="fas fa-directions"></i>
+                    </div>
+                </div>
                 <div className="button-container">
                     <Link to={`/businesses/${business.id}/reviews/new`}>
                         <button className="write-review-button"><i className="far fa-star"></i> Write a Review</button>

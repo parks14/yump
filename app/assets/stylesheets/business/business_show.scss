@@ -70,12 +70,13 @@
     position: fixed;
     width: 330px;
     right: 13%;
-    top: 540px;
     border: 1px solid lightgray;
     border-radius: 3px;
     font-size: 15px;
     font-weight: 500;
     padding: 20px;
+    margin-top: 37px;
+    z-index: 1;
 
     a {
         text-decoration: none;

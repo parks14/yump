@@ -28,7 +28,6 @@ const App = () => (
             <Route path="/404" component={PageNotFound} />
             <Redirect to="/404" />
         </Switch>
-        {/* <Footer /> */}
     </div>
 );
 

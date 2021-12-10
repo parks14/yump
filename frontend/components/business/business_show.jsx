@@ -25,7 +25,7 @@ const BusinessShow = ({ business, fetchBusiness, fetchReviews, match, currentUse
                 fetchBusiness={fetchBusiness}
                 fetchReviews={fetchReviews}
             />
-            <Footer />
+            <div className="show-footer"><Footer /></div>
         </div>
     )
 };
