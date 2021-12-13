@@ -1,7 +1,7 @@
 ![yump](https://user-images.githubusercontent.com/88470703/145477850-8edf38af-2349-4afd-9872-ef3f621c4eee.png)
 
 
-[Yump](https://yump1.herokuapp.com/#/) is a website that allows users to create and account and search restaurants by their category or location. Users can also leave reviews and ratings for a business.
+[Yump](https://yump1.herokuapp.com/#/) is a fullstack clone of Yelp that allows users to create and account and search restaurants by their category or location. Users can also leave reviews and ratings for a business.
 
 ## Technologies Used
  * **Back-end:** Ruby on Rails
